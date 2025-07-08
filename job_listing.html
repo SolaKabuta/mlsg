@@ -22,6 +22,7 @@
             <link rel="stylesheet" href="assets/css/slick.css">
             <link rel="stylesheet" href="assets/css/nice-select.css">
             <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
    </head>
 
    <body>
@@ -89,21 +90,34 @@
     </header>
     <main>
 
-        <!-- Hero Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/about.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap text-center">
-                                <h2>Get your job</h2>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Hero-slider Area Start-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/gallery/cv_bg.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/gallery/cv_bg.jpg" class="d-block w-100 h-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/gallery/cv_bg.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <!-- Hero Area End -->
+        <!-- Hero-slider Area End -->
         <!-- Job List Area Start -->
         <div class="job-listing-area pt-120 pb-120">
             <div class="container">
@@ -113,7 +127,7 @@
                         <div class="row">
                             <div class="col-12">
                                     <div class="small-section-tittle2 mb-45">
-                                    <div class="ion"> <svg 
+                                    <div class="ion"> <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="20px" height="12px">
@@ -121,7 +135,7 @@
                                         d="M7.778,12.000 L12.222,12.000 L12.222,10.000 L7.778,10.000 L7.778,12.000 ZM-0.000,-0.000 L-0.000,2.000 L20.000,2.000 L20.000,-0.000 L-0.000,-0.000 ZM3.333,7.000 L16.667,7.000 L16.667,5.000 L3.333,5.000 L3.333,7.000 Z"/>
                                     </svg>
                                     </div>
-                                    <h4>Filter Jobs</h4>
+                                    <h4>Filtrer les emplois</h4>
                                 </div>
                             </div>
                         </div>
@@ -130,33 +144,33 @@
                             <!-- single one -->
                             <div class="single-listing">
                                <div class="small-section-tittle2">
-                                     <h4>Job Category</h4>
+                                     <h4>Catégorie d'emplois</h4>
                                </div>
                                 <!-- Select job items start -->
                                 <div class="select-job-items2">
                                     <select name="select">
-                                        <option value="">All Category</option>
-                                        <option value="">Category 1</option>
-                                        <option value="">Category 2</option>
-                                        <option value="">Category 3</option>
-                                        <option value="">Category 4</option>
+                                        <option value="">Toutes les Secteurs</option>
+                                        <option value="">Informatique</option>
+                                        <option value="">Horeca</option>
+                                        <option value="">Logistique</option>
+                                        <option value="">Chauffeur</option>
                                     </select>
                                 </div>
                                 <!--  Select job items End-->
                                 <!-- select-Categories start -->
-                                <div class="select-Categories pt-80 pb-50">
+                                <div class="select-Categories pt-80 pb-4">
                                     <div class="small-section-tittle2">
-                                        <h4>Job Type</h4>
+                                        <h4>Types d'emplois </h4>
                                     </div>
-                                    <label class="container">Full Time
+                                    <label class="container">Temps Plein
                                         <input type="checkbox" >
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="container">Part Time
+                                    <label class="container">Temps Partiel
                                         <input type="checkbox" checked="checked active">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="container">Remote
+                                    <label class="container">A distance
                                         <input type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
@@ -165,42 +179,26 @@
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <!-- select-Categories End -->
                             </div>
-                            <!-- single two -->
-                            <div class="single-listing">
-                               <div class="small-section-tittle2">
-                                     <h4>Job Location</h4>
-                               </div>
-                                <!-- Select job items start -->
-                                <div class="select-job-items2">
-                                    <select name="select">
-                                        <option value="">Anywhere</option>
-                                        <option value="">Category 1</option>
-                                        <option value="">Category 2</option>
-                                        <option value="">Category 3</option>
-                                        <option value="">Category 4</option>
-                                    </select>
-                                </div>
-                                <!--  Select job items End-->
-                                <!-- select-Categories start -->
-                                <div class="select-Categories pt-80 pb-50">
+                                <!-- select-Categories End -->
+
+                                <!-- Salaire start -->
+                                <div class="select-Categories pb-50">
                                     <div class="small-section-tittle2">
-                                        <h4>Experience</h4>
-                                    </div>
-                                    <label class="container">1-2 Years
+                                        <h4>Salaire</h4>
+                                    <label class="container">20 000€ ++
                                         <input type="checkbox" >
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="container">2-3 Years
+                                    <label class="container">20 000€ ++
                                         <input type="checkbox" checked="checked active">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="container">3-6 Years
+                                    <label class="container">20 000€ ++
                                         <input type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="container">6-more..
+                                    <label class="container">20 000€ ++
                                         <input type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
@@ -210,31 +208,23 @@
                             <!-- single three -->
                             <div class="single-listing">
                                 <!-- select-Categories start -->
-                                <div class="select-Categories pb-50">
+                                <div class="select-Categories pb-3">
                                     <div class="small-section-tittle2">
-                                        <h4>Posted Within</h4>
+                                        <h4>Langue demandées</h4>
                                     </div>
-                                    <label class="container">Any
+                                    <label class="container">Toutes
                                         <input type="checkbox" >
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="container">Today
+                                    <label class="container">Anglais
                                         <input type="checkbox" checked="checked active">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="container">Last 2 days
+                                    <label class="container">Français
                                         <input type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="container">Last 3 days
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Last 5 days
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Last 10 days
+                                    <label class="container">Néerlandais
                                         <input type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
@@ -243,27 +233,6 @@
                             </div>
                             <div class="single-listing">
                                 <!-- Range Slider Start -->
-                                <aside class="left_widgets p_filter_widgets price_rangs_aside sidebar_box_shadow">
-                                    <div class="small-section-tittle2">
-                                        <h4>Filter Jobs</h4>
-                                    </div>
-                                    <div class="widgets_inner">
-                                        <div class="range_item">
-                                            <!-- <div id="slider-range"></div> -->
-                                            <input type="text" class="js-range-slider" value="" />
-                                            <div class="d-flex align-items-center">
-                                                <div class="price_text">
-                                                    <p>Price :</p>
-                                                </div>
-                                                <div class="price_value d-flex justify-content-center">
-                                                    <input type="text" class="js-input-from" id="amount" readonly />
-                                                    <span>to</span>
-                                                    <input type="text" class="js-input-to" id="amount" readonly />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </aside>
                               <!-- Range Slider End -->
                             </div>
                         </div>
@@ -278,14 +247,14 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="count-job mb-35">
-                                            <span>39, 782 Jobs found</span>
+                                            <span>500 emplois trouvé</span>
                                             <!-- Select job items start -->
                                             <div class="select-job-items">
-                                                <span>Sort by</span>
+                                                <span>Trier par</span>
                                                 <select name="select">
-                                                    <option value="">None</option>
-                                                    <option value="">job list</option>
-                                                    <option value="">job list</option>
+                                                    <option value="">/</option>
+                                                    <option value="">Salaire</option>
+                                                    <option value="">Heure par semaine</option>
                                                     <option value="">job list</option>
                                                 </select>
                                             </div>
@@ -295,159 +264,95 @@
                                 </div>
                                 <!-- Count of Job list End -->
                                 <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list1.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
+                                <div class="row row-cols-1 row-cols-md-3 g-4">
+                                    <div class="col">
+                                        <div class="card h-100">
+                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Titre d'emplois</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">derniere mis a jour il y'a 3min</small>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
+                                    <div class="col">
+                                        <div class="card h-100">
+                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Titre d'emplois</h5>
+                                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">derniere mis a jour il y'a 3min</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100">
+                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Titre d'emplois</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">derniere mis a jour il y'a 3min</small>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
                                 <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list2.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
+                                <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+                                    <div class="col">
+                                        <div class="card h-100">
+                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Titre d'emplois</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">derniere mis a jour il y'a 3min</small>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
+                                    <div class="col">
+                                        <div class="card h-100">
+                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Titre d'emplois</h5>
+                                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">derniere mis a jour il y'a 3min</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100">
+                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Titre d'emplois</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-body-secondary">derniere mis a jour il y'a 3min</small>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
                                 <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list3.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
+
                                 <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list4.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
+
                                 <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list1.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
+
                                 <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list3.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
+
                                 <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list4.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
+
                             </div>
                         </section>
                         <!-- Featured_job_end -->
@@ -614,6 +519,7 @@
 	
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 		<!-- Jquery, Popper, Bootstrap -->
 		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
         <script src="./assets/js/popper.min.js"></script>
