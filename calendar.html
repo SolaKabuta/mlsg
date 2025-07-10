@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="assets/css/slick.css">
   <link rel="stylesheet" href="assets/css/nice-select.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/calendar.css">
 </head>
 
 <body>
@@ -134,123 +135,108 @@
 
   <!-- Calendar Start -->
 
+  <div class="container my-5 mb-5">
+    <div class="calendar-container">
+      <div class="calendar-header">
+        <h1 class="calendar-title">Calendrier des activités</h1>
+        <p class="mb-0 text-white">Mission Locale de Saint-Gilles</p>
+      </div>
 
+      <div class="calendar-nav">
+        <button id="prev-month" class="btn btn-sm btn-outline-primary">
+          <i class="fas fa-chevron-left me-1"></i> Mois précédent
+        </button>
+        <h2 id="current-month" class="mb-0 fs-5 fw-bold font-weight-bold">Mois Année</h2>
+        <button id="next-month" class="btn btn-sm btn-outline-primary">
+          Mois suivant <i class="fas fa-chevron-right ms-1"></i>
+        </button>
+      </div>
 
-  <!-- Calendar End -->
-  <!-- Online CV Area Start -->
-  <div class="online-cv cv-bg section-overly pt-90 pb-120"  data-background="assets/img/gallery/cv_bg.jpg">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-10">
-          <div class="cv-caption text-center">
-            <p class="pera1">FEATURED TOURS Packages</p>
-            <p class="pera2"> Make a Difference with Your Online Resume!</p>
-            <a href="#" class="border-btn2 border-btn4">Upload your cv</a>
+      <div class="calendar-weekdays">
+        <div>Lundi</div>
+        <div>Mardi</div>
+        <div>Mercredi</div>
+        <div>Jeudi</div>
+        <div>Vendredi</div>
+        <div>Samedi</div>
+        <div>Dimanche</div>
+      </div>
+
+      <div id="calendar-days" class="calendar-days">
+        <!-- Les jours seront générés par JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal pour afficher les détails de l'événement -->
+  <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eventModalLabel">Détails de l'événement</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4 id="event-title" class="mb-3"></h4>
+          <p><i class="far fa-calendar-alt me-2"></i> <span id="event-date"></span></p>
+          <p><i class="far fa-clock me-2"></i> <span id="event-time"></span></p>
+          <p><i class="fas fa-map-marker-alt me-2"></i> <span id="event-location"></span></p>
+          <div class="mb-3">
+            <span id="event-type" class="event-type"></span>
           </div>
+          <p id="event-description"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary">S'inscrire</button>
         </div>
       </div>
     </div>
   </div>
-  <!-- Online CV Area End-->
-  <!-- Featured_job_start -->
-  <section class="featured-job-area feature-padding">
-    <div class="container">
-      <!-- Section Tittle -->
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="section-tittle text-center">
-            <span>Recent Job</span>
-            <h2>Featured Jobs</h2>
-          </div>
-        </div>
+
+  <!-- Calendar End -->
+  <!-- Card job listing Start -->
+
+
+  <div class="d-flex justify-content-center flex-column align-items-center mt-5 " >
+  <h2 class="mb-5">Découverte de Métiers</h2>
+    <div class="card text-bg-dark mb-3">
+      <img src="assets/img/gallery/cv_bg.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title font-weight-bold">Titre D'emplois</h5>
+        <p class="card-text">Ville: </p>
+        <p class="card-text">Secteur: </p>
+        <p class="card-text">Déscription: </p>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-xl-10">
-          <!-- single-job-content -->
-          <div class="single-job-items mb-30">
-            <div class="job-items">
-              <div class="company-img">
-                <a href="job_details.html"><img src="assets/img/icon/job-list1.png" alt=""></a>
-              </div>
-              <div class="job-tittle">
-                <a href="job_details.html"><h4>Digital Marketer</h4></a>
-                <ul>
-                  <li>Creative Agency</li>
-                  <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                  <li>$3500 - $4000</li>
-                </ul>
-              </div>
-            </div>
-            <div class="items-link f-right">
-              <a href="job_details.html">Full Time</a>
-              <span>7 hours ago</span>
-            </div>
-          </div>
-          <!-- single-job-content -->
-          <div class="single-job-items mb-30">
-            <div class="job-items">
-              <div class="company-img">
-                <a href="job_details.html"><img src="assets/img/icon/job-list2.png" alt=""></a>
-              </div>
-              <div class="job-tittle">
-                <a href="job_details.html"><h4>Digital Marketer</h4></a>
-                <ul>
-                  <li>Creative Agency</li>
-                  <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                  <li>$3500 - $4000</li>
-                </ul>
-              </div>
-            </div>
-            <div class="items-link f-right">
-              <a href="job_details.html">Full Time</a>
-              <span>7 hours ago</span>
-            </div>
-          </div>
-          <!-- single-job-content -->
-          <div class="single-job-items mb-30">
-            <div class="job-items">
-              <div class="company-img">
-                <a href="job_details.html"><img src="assets/img/icon/job-list3.png" alt=""></a>
-              </div>
-              <div class="job-tittle">
-                <a href="job_details.html"><h4>Digital Marketer</h4></a>
-                <ul>
-                  <li>Creative Agency</li>
-                  <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                  <li>$3500 - $4000</li>
-                </ul>
-              </div>
-            </div>
-            <div class="items-link f-right">
-              <a href="job_details.html">Full Time</a>
-              <span>7 hours ago</span>
-            </div>
-          </div>
-          <!-- single-job-content -->
-          <div class="single-job-items mb-30">
-            <div class="job-items">
-              <div class="company-img">
-                <a href="job_details.html"><img src="assets/img/icon/job-list4.png" alt=""></a>
-              </div>
-              <div class="job-tittle">
-                <a href="job_details.html"><h4>Digital Marketer</h4></a>
-                <ul>
-                  <li>Creative Agency</li>
-                  <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                  <li>$3500 - $4000</li>
-                </ul>
-              </div>
-            </div>
-            <div class="items-link f-right">
-              <a href="job_details.html">Full Time</a>
-              <span>7 hours ago</span>
-            </div>
-          </div>
+        <div class="card-footer ">
+          <small class="text-body-secondary">derniere mise a jour il y'a 3 minutes</small>
         </div>
+    </div>
+
+    <div class="card text-bg-dark mb-3">
+      <img src="assets/img/gallery/cv_bg.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer ">
+        <small class="text-body-secondary">derniere mise a jour il y'a 3 minutes</small>
       </div>
     </div>
-  </section>
-  <!-- Featured_job_end -->
+
+    <div class="card text-bg-dark mb-3">
+      <img src="assets/img/gallery/cv_bg.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer ">
+        <small class="text-body-secondary">derniere mise a jour il y'a 3 minutes</small>
+      </div>
+    </div>
+
+  <!-- Card job listing End -->
+
   <!-- How  Apply Process Start-->
   <div class="apply-process-area apply-bg pt-150 pb-150" data-background="assets/img/gallery/how-applybg.png">
     <div class="container">
@@ -622,6 +608,15 @@
 <!-- Jquery Plugins, main Jquery -->
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
+
+<script src="./assets/js/calendar.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+</script>
 
 </body>
 </html>
