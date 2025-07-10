@@ -25,181 +25,6 @@
   <link rel="stylesheet" href="assets/css/calendar.css">
 </head>
 
-<style>
-  :root {
-    --primary-color: #1a5a96; /* Bleu administratif */
-    --secondary-color: #f8f9fa;
-    --accent-color: #e9ecef;
-    --text-color: #212529;
-    --event-color-1: #4e79a7;
-    --event-color-2: #f28e2b;
-    --event-color-3: #e15759;
-    --event-color-4: #76b7b2;
-  }
-
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text-color);
-  }
-
-  .btn {
-    background-color: rgb(0,168,159);
-  }
-
-  .calendar-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .calendar-header {
-    background-color: rgb(227, 0, 86);
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .calendar-title {
-    color: whitesmoke;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0;
-  }
-
-  .calendar-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    background-color: var(--accent-color);
-  }
-
-  .calendar-weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    background-color: var(--secondary-color);
-    font-weight: 600;
-    text-align: center;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #dee2e6;
-  }
-
-  .calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 1px;
-    background-color: #dee2e6;
-  }
-
-  .calendar-day {
-    min-height: 100px;
-    background-color: white;
-    padding: 0.5rem;
-    position: relative;
-    transition: all 0.2s ease;
-  }
-
-  .calendar-day:hover {
-    background-color: #f8f9fa;
-    transform: scale(1.02);
-    z-index: 1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .day-number {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-
-  .event {
-    font-size: 0.8rem;
-    margin-bottom: 0.2rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 0.1rem 0.3rem;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-
-  .event-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-right: 4px;
-  }
-
-  .other-month {
-    background-color: var(--secondary-color);
-    color: #adb5bd;
-  }
-
-  .today {
-    background-color: rgba(26, 90, 150, 0.1);
-    border: 1px solid var(--primary-color);
-  }
-
-  .event-modal .modal-header {
-    background-color: var(--primary-color);
-    color: white;
-  }
-
-  .event-type {
-    display: inline-block;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .calendar-weekdays, .calendar-day {
-      font-size: 0.8rem;
-    }
-
-    .calendar-day {
-      min-height: 70px;
-      padding: 0.3rem;
-    }
-
-    .event {
-      font-size: 0.7rem;
-    }
-
-    .day-number {
-      margin-bottom: 0.2rem;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .calendar-weekdays {
-      display: none;
-    }
-
-    .calendar-days {
-      grid-template-columns: 1fr;
-    }
-
-    .calendar-day {
-      min-height: auto;
-      border-bottom: 1px solid #dee2e6;
-    }
-
-    .other-month {
-      display: none;
-    }
-
-    .day-number {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-  }
-</style>
-
 <body>
 <!-- Preloader Start -->
 <div id="preloader-active">
@@ -375,7 +200,7 @@
 
   <div class="d-flex justify-content-center flex-column align-items-center mt-5 " >
   <h2 class="">Découverte de Métiers</h2>
-    <div class="card text-bg-dark mb-3" style="max-width: 800px;">
+    <div class="card text-bg-dark mb-3">
       <img src="assets/img/gallery/cv_bg.jpg" class="card-img" alt="...">
       <div class="card-img-overlay">
         <h5 class="card-title">Card title</h5>
@@ -386,26 +211,27 @@
         </div>
     </div>
 
-
-    <div class="card text-bg-dark mb-3" style="max-width: 800px;">
+    <div class="card text-bg-dark mb-3">
       <img src="assets/img/gallery/cv_bg.jpg" class="card-img" alt="...">
       <div class="card-img-overlay">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+      </div>
+      <div class="card-footer ">
+        <small class="text-body-secondary">derniere mise a jour il y'a 3 minutes</small>
       </div>
     </div>
 
-
-    <div class="card text-bg-dark mb-3" style="max-width: 800px;">
+    <div class="card text-bg-dark mb-3">
       <img src="assets/img/gallery/cv_bg.jpg" class="card-img" alt="...">
       <div class="card-img-overlay">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+      </div>
+      <div class="card-footer ">
+        <small class="text-body-secondary">derniere mise a jour il y'a 3 minutes</small>
       </div>
     </div>
-  </div>
 
   <!-- Card job listing End -->
 
