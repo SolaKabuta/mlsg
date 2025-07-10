@@ -45,3 +45,13 @@
 
 }
 
+.carousel-img-fix {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel-item {
+  filter: brightness(70%) blur(2px);
+}
+
