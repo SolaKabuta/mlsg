@@ -175,19 +175,19 @@
                                         <h4>Types d'emplois </h4>
                                     </div>
                                     <label class="container">Temps Plein
-                                        <input type="checkbox" >
+                                        <input type="checkbox" name="type" value="temp-plein" >
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">Temps Partiel
-                                        <input type="checkbox" checked="checked active">
+                                        <input type="checkbox" checked="checked active" name="type" value="temp-partiel" >
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">A distance
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="type" value="distance">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">Freelance
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="type" value="freelance">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -198,19 +198,19 @@
                                     <div class="small-section-tittle2">
                                         <h4>Salaire</h4>
                                     <label class="container">20 000€ ++
-                                        <input type="checkbox" >
+                                        <input type="checkbox" name="salaire" value="20000" >
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">20 000€ ++
-                                        <input type="checkbox" checked="checked active">
+                                        <input type="checkbox" checked="checked active" name="salaire" value="20000">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">20 000€ ++
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="salaire" value="20000">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">20 000€ ++
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="salaire" value="20000">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -229,15 +229,15 @@
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">Anglais
-                                        <input type="checkbox" checked="checked active">
+                                        <input type="checkbox" checked="checked active" name="langue" value="anglais" >
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">Français
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="langue" value="francais">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">Néerlandais
-                                        <input type="checkbox">
+                                        <input type="checkbox"  name="langue" value="neerlandais">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -268,145 +268,135 @@
                                 <!-- Count of Job list End -->
                                 <!-- single-job-content -->
                                 <div class="row row-cols-1 row-cols-lg-3 g-4">
-                                    <div class="col">
+                                    <div class="col job-card" data-type="temp-plein" data-salaire="30000" data-langue="francais" data-secteur="informatique" >
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Développeur Web Junior</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 30 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Informatique</p>
+                                                <p class="card-text"><strong>Langue</strong>: Français</p>
+                                                <p class="card-text"><strong>Description</strong>: Rejoignez une équipe dynamique pour créer des sites modernes. </p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col job-card" data-type="temp-partiel" data-salaire="22000" data-langue="anglais" data-secteur="horeca" >
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Serveur(se) en restauration</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 22 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Horeca</p>
+                                                <p class="card-text"><strong>Langue</strong>: Anglais</p>
+                                                <p class="card-text"><strong>Description</strong>: Poste en service à temps partiel dans un restaurant local.</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col job-card" data-type="freelance" data-salaire="35000" data-langue="anglais" data-secteur="informatique">
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Designer UI/UX</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 35 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: informatique</p>
+                                                <p class="card-text"><strong>Langue</strong>: Anglais</p>
+                                                <p class="card-text"><strong>Description</strong>: Missions freelance pour améliorer l’ergonomie d’applications web. </p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <!-- single-job-content -->
-                                <div class="row row-cols-1 row-cols-lg-3 g-4 mt-5">
-                                    <div class="col">
+                                    <div class="col job-card" data-type="distance" data-salaire="27000" data-langue="neerlandais" data-secteur="logistique">
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Gestionnaire de stocks</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 27 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Logistique</p>
+                                                <p class="card-text"><strong>Langue</strong>: Néerlandais</p>
+                                                <p class="card-text"><strong>Description</strong>: Télétravail partiel possible, gestion d’inventaire automatisé.</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col job-card" data-type="temp-plein" data-salaire="25000" data-langue="francais" data-secteur="chauffeur">
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Chauffeur-livreur</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 25 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Chauffeur</p>
+                                                <p class="card-text"><strong>Langue</strong>: Français</p>
+                                                <p class="card-text"><strong>Description</strong>: Livraison de colis dans la région de Bruxelles.</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col job-card" data-type="freelance" data-salaire="40000" data-langue="anglais" data-secteur="logistique">
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Consultant logistique</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 40 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Logistique</p>
+                                                <p class="card-text"><strong>Langue</strong>: Anglais</p>
+                                                <p class="card-text"><strong>Description</strong>: Conseil en optimisation des chaînes de distribution.</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <!-- single-job-content -->
-
-
-                                <div class="row row-cols-1 row-cols-lg-3 g-4 mt-5">
-                                    <div class="col">
+                                    <div class="col job-card" data-type="temp-partiel" data-salaire="18000" data-langue="francais" data-secteur="horeca">
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Commis de cuisine</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 18 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Horeca</p>
+                                                <p class="card-text"><strong>Langue</strong>: Français</p>
+                                                <p class="card-text"><strong>Description</strong>: Préparation et dressage de plats simples dans une brasserie.</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col job-card" data-type="distance" data-salaire="32000" data-langue="neerlandais" data-secteur="informatique">
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Support IT à distance</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 32 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Informatique</p>
+                                                <p class="card-text"><strong>Langue</strong>: Néerlandais</p>
+                                                <p class="card-text"><strong>Description</strong>: Assistance technique pour utilisateurs en entreprise.</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col job-card" data-type="temp-plein" data-salaire="28000" data-langue="neerlandais" data-secteur="chauffeur">
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Conducteur de bus scolaire</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 28 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Chauffeur</p>
+                                                <p class="card-text"><strong>Langue</strong>: Néerlandais</p>
+                                                <p class="card-text"><strong>Description</strong>: Conduite d'enfants matin et soir en toute sécurité.<</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
@@ -414,14 +404,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- single-job-content End -->
 
-                                <!-- single-job-content -->
 
-                                <!-- single-job-content -->
-
-                                <!-- single-job-content -->
-
-                                <!-- single-job-content -->
 
                             </div>
                         </section>
@@ -624,6 +609,52 @@
 
    <!-- animation -->
     <script src="./assets/js/job-listing.js"></script>
+<script>
+    $(document).ready(function () {
+        $('input[type="checkbox"]').on('change', function () {
+            const filters = {
+                type: $('input[name="type"]:checked').map(function () {
+                    return $(this).val().trim().toLowerCase();
+                }).get(),
+                salaire: $('input[name="salaire"]:checked').map(function () {
+                    return $(this).val().trim().toLowerCase();
+                }).get(),
+                langue: $('input[name="langue"]:checked').map(function () {
+                    return $(this).val().trim().toLowerCase();
+                }).get(),
+            };
+
+            $('.job-card').each(function () {
+                const $card = $(this);
+                const type = $card.data('type')?.toString().trim().toLowerCase();
+                const salaire = $card.data('salaire')?.toString().trim().toLowerCase();
+                const langue = $card.data('langue')?.toString().trim().toLowerCase();
+
+                let visible = true;
+
+                if (filters.type.length > 0 && !filters.type.includes(type)) {
+                    visible = false;
+                }
+
+                if (filters.salaire.length > 0 && !filters.salaire.includes(salaire)) {
+                    visible = false;
+                }
+
+                if (filters.langue.length > 0 && !filters.langue.includes(langue)) {
+                    visible = false;
+                }
+
+                if (visible) {
+                    $card.css("display", "block");
+                } else {
+                    $card.css("display", "none");
+                }
+            });
+        });
+    });
+</script>
+
+
         
     </body>
 </html>
