@@ -9,9 +9,11 @@ $(document).ready(function() {
         $filter.on('click', function() {
             $category.slideToggle(300, function() {
                 if ($category.is(':visible')) {
-                    $content.removeClass('col-xl-12').addClass('col-xl-9');
+                    $content.css('display', 'none');
+                    $content.fadeIn('fast').removeClass('col-xl-12').addClass('col-xl-9');
                 } else {
-                    $content.addClass('col-xl-12').removeClass('col-xl-9');
+                    $content.css('display', 'none');
+                    $content.fadeIn(400).removeClass('col-xl-9').addClass('col-xl-12');
                 }
             });
         });

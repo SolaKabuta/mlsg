@@ -1,3 +1,9 @@
+#content {
+  transition: all 0.25s ease-in-out;
+}
+
+
+
 .card {
 
   transition: transform 0.2s ease-in-out;
