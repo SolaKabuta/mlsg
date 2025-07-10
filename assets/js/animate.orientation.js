@@ -1,4 +1,14 @@
+// Hero Area
+$(".slider-area, .hero-cap h2, .hero-cap p").css("opacity", 0);
 
+setTimeout(function(){
+    $(".slider-area").animate({opacity: 1}, 800);
+    $(".hero-cap h2").delay(600).animate({opacity: 1}, 1600);
+    $(".hero-cap p").delay(800).animate({opacity: 1}, 1200);
+}, 1200);
+
+
+// Support Company Start
 $(".section-tittle span, .section-tittle h2, .support-caption p, .support-caption a").css({
     opacity: 0,
     transform: 'translateX(-30px)',
