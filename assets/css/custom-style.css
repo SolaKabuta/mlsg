@@ -20,3 +20,10 @@ body {
 .hero_texts, p {
     color: white;
 }
+
+
+/*Landing page cards*/
+
+.blog-cap p {
+    color: grey;
+}
