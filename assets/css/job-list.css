@@ -25,7 +25,6 @@
 }
 
 .carousel {
-  position: relative;
   animation: opacity 3s;
 }
 
@@ -71,7 +70,18 @@
   width: 100%;
 }
 
-.carousel-item {
-  filter: brightness(70%) blur(2px);
-}
 
+.blurred-bg img {
+  filter: brightness(70%) blur(8px);
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.carousel-caption {
+  z-index: 1;
+  position: relative;
+}
