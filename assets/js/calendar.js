@@ -23,7 +23,7 @@ const eventsData = [
   {
     id: 3,
     title: "Forum des métiers",
-    date: "2023-11-22",
+    date: "2025-07-25",
     time: "10:00 - 17:00",
     location: "Espace polyvalent",
     description: "Découverte des différents métiers et rencontres avec des professionnels.",
