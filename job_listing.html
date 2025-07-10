@@ -161,11 +161,11 @@
                                 <!-- Select job items start -->
                                 <div class="select-job-items2">
                                     <select name="select">
-                                        <option value="">Toutes les Secteurs</option>
-                                        <option value="">Informatique</option>
-                                        <option value="">Horeca</option>
-                                        <option value="">Logistique</option>
-                                        <option value="">Chauffeur</option>
+                                        <option name="type" value="">Toutes les Secteurs</option>
+                                        <option name="type" value="informatique">Informatique</option>
+                                        <option name="type" value="horeca">Horeca</option>
+                                        <option name="type" value="logistique">Logistique</option>
+                                        <option name="type" value="chauffeur">Chauffeur</option>
                                     </select>
                                 </div>
                                 <!--  Select job items End-->
@@ -197,20 +197,24 @@
                                 <div class="select-Categories pb-50">
                                     <div class="small-section-tittle2">
                                         <h4>Salaire</h4>
-                                    <label class="container">20 000€ ++
-                                        <input type="checkbox" name="salaire" value="20000" >
+                                    <label class="container">15 000€ ++
+                                        <input type="checkbox" name="salaire" value="15000" >
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">20 000€ ++
                                         <input type="checkbox" checked="checked active" name="salaire" value="20000">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="container">20 000€ ++
-                                        <input type="checkbox" name="salaire" value="20000">
+                                    <label class="container">25 000€ ++
+                                        <input type="checkbox" name="salaire" value="25000">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="container">20 000€ ++
-                                        <input type="checkbox" name="salaire" value="20000">
+                                    <label class="container">30 000€ ++
+                                        <input type="checkbox" name="salaire" value="30000">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                        <label class="container">40 000€ ++
+                                        <input type="checkbox" name="salaire" value="40000">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -283,12 +287,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col job-card" data-type="temp-partiel" data-salaire="22000" data-langue="anglais" data-secteur="horeca" >
+                                    <div class="col job-card" data-type="temp-partiel" data-salaire="20000" data-langue="anglais" data-secteur="horeca" >
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Serveur(se) en restauration</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: 22 000€</p>
+                                                <p class="card-text"><strong>Salaire</strong>: 20 000€</p>
                                                 <p class="card-text"><strong>Secteur</strong>: Horeca</p>
                                                 <p class="card-text"><strong>Langue</strong>: Anglais</p>
                                                 <p class="card-text"><strong>Description</strong>: Poste en service à temps partiel dans un restaurant local.</p>
@@ -298,12 +302,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col job-card" data-type="freelance" data-salaire="35000" data-langue="anglais" data-secteur="informatique">
+                                    <div class="col job-card" data-type="freelance" data-salaire="30000" data-langue="anglais" data-secteur="informatique">
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Designer UI/UX</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: 35 000€</p>
+                                                <p class="card-text"><strong>Salaire</strong>: 30 000€</p>
                                                 <p class="card-text"><strong>Secteur</strong>: informatique</p>
                                                 <p class="card-text"><strong>Langue</strong>: Anglais</p>
                                                 <p class="card-text"><strong>Description</strong>: Missions freelance pour améliorer l’ergonomie d’applications web. </p>
@@ -313,12 +317,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col job-card" data-type="distance" data-salaire="27000" data-langue="neerlandais" data-secteur="logistique">
+                                    <div class="col job-card" data-type="distance" data-salaire="25000" data-langue="neerlandais" data-secteur="logistique">
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Gestionnaire de stocks</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: 27 000€</p>
+                                                <p class="card-text"><strong>Salaire</strong>: 25 000€</p>
                                                 <p class="card-text"><strong>Secteur</strong>: Logistique</p>
                                                 <p class="card-text"><strong>Langue</strong>: Néerlandais</p>
                                                 <p class="card-text"><strong>Description</strong>: Télétravail partiel possible, gestion d’inventaire automatisé.</p>
@@ -358,12 +362,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col job-card" data-type="temp-partiel" data-salaire="18000" data-langue="francais" data-secteur="horeca">
+                                    <div class="col job-card" data-type="temp-partiel" data-salaire="15000" data-langue="francais" data-secteur="horeca">
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Commis de cuisine</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: 18 000€</p>
+                                                <p class="card-text"><strong>Salaire</strong>: 15 000€</p>
                                                 <p class="card-text"><strong>Secteur</strong>: Horeca</p>
                                                 <p class="card-text"><strong>Langue</strong>: Français</p>
                                                 <p class="card-text"><strong>Description</strong>: Préparation et dressage de plats simples dans une brasserie.</p>
@@ -373,12 +377,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col job-card" data-type="distance" data-salaire="32000" data-langue="neerlandais" data-secteur="informatique">
+                                    <div class="col job-card" data-type="distance" data-salaire="30000" data-langue="neerlandais" data-secteur="informatique">
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Support IT à distance</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: 32 000€</p>
+                                                <p class="card-text"><strong>Salaire</strong>: 30 000€</p>
                                                 <p class="card-text"><strong>Secteur</strong>: Informatique</p>
                                                 <p class="card-text"><strong>Langue</strong>: Néerlandais</p>
                                                 <p class="card-text"><strong>Description</strong>: Assistance technique pour utilisateurs en entreprise.</p>
@@ -388,12 +392,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col job-card" data-type="temp-plein" data-salaire="28000" data-langue="neerlandais" data-secteur="chauffeur">
+                                    <div class="col job-card" data-type="temp-plein" data-salaire="30000" data-langue="neerlandais" data-secteur="chauffeur">
                                         <div class="card h-100">
                                             <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Conducteur de bus scolaire</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: 28 000€</p>
+                                                <p class="card-text"><strong>Salaire</strong>: 30 000€</p>
                                                 <p class="card-text"><strong>Secteur</strong>: Chauffeur</p>
                                                 <p class="card-text"><strong>Langue</strong>: Néerlandais</p>
                                                 <p class="card-text"><strong>Description</strong>: Conduite d'enfants matin et soir en toute sécurité.<</p>
@@ -629,6 +633,7 @@
                 const type = $card.data('type')?.toString().trim().toLowerCase();
                 const salaire = $card.data('salaire')?.toString().trim().toLowerCase();
                 const langue = $card.data('langue')?.toString().trim().toLowerCase();
+                const secteur = $card.data('secteur')?.toString().trim().toLowerCase();
 
                 let visible = true;
 
@@ -643,6 +648,7 @@
                 if (filters.langue.length > 0 && !filters.langue.includes(langue)) {
                     visible = false;
                 }
+
 
                 if (visible) {
                     $card.css("display", "block");
