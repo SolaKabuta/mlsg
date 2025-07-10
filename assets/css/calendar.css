@@ -193,10 +193,14 @@ body {
 
 }
 
+.section-overly {
+  background-color: black !important;
+}
+
 /* Card */
 
 .card {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   max-width: 800px;
 }
 
@@ -208,11 +212,16 @@ body {
 
 
 .card img {
-  filter: brightness(70%) blur(1px);
+  filter: brightness(70%) blur(2px);
 }
 
 .card p {
   color: whitesmoke;
+}
+
+.card p:nth-child(3), p:nth-child(4) {
+  color: #010B1D;
+  font-weight: 500;
 }
 
 .card:hover {
@@ -226,8 +235,8 @@ body {
 .card .ville {
   font-size: 0.8rem;
   font-weight: 600;
-  background-color: rgb(227, 0, 86);
-  width: 60px;
+  background-color: rgb(0, 168, 159);
+  width: 65px;
   border-radius: 5px;
   text-align: center;
 

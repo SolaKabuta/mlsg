@@ -8,3 +8,40 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform: scale(1.02);
 }
+
+
+
+.card {
+  animation: slideIn 2.2s;
+}
+
+.job-category-listing {
+  animation: slideInLeft 2.2s;
+}
+
+
+@keyframes slideInLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-500px);
+
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+}
+@keyframes slideIn {
+  0%{
+    opacity: 0;
+    transform: translateY(500px);
+
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+}
+
