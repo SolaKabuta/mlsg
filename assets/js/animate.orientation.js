@@ -1,38 +1,42 @@
-
-$(".section-tittle span, .section-tittle h2, .support-caption p, .support-caption a").css({
+$(".left, .hl , .imgl, .pl").css({
     opacity: 0,
     transform: 'translateX(-30px)',
     transition: '0.6s'
 });
 
-$("#img1, .support-img-cap").css({
+$(".right, .hr, .imgr, .pr").css({
     opacity: 0,
     transform: 'translateX(30px)',
     transition: '0.6s'
 });
 
 setTimeout(function(){
-    $(".section-tittle span").css({
+    $(".left, .right").css({
         opacity: 1,
         transform: 'translateX(0px)'
-
-    }, setTimeout(function(){
-        $(".section-tittle h2, #img1").css({
+    });
+    
+    setTimeout(function(){
+        $(".hl, .hr").css({
             opacity: 1,
             transform: 'translateX(0px)'
-        }, setTimeout(function(){
-            $(".support-caption p").css({
-            opacity: 1,
-            transform: 'translateX(0px)'
-            }, setTimeout(function(){
-                $(".support-caption a, .support-img-cap").css({
+        });
+        
+        setTimeout(function(){
+            $(".imgl, .imgr").css({
                 opacity: 1,
                 transform: 'translateX(0px)'
-            })
-            }, 150));
-        }, 200));
-    }, 300));
-}, 2200)
+            });
+            
+            setTimeout(function(){
+                $(".pl, .pr").css({
+                    opacity: 1,
+                    transform: 'translateX(0px)'
+                });
+            }, 300);
+        }, 300);
+    }, 300);
+}, 1200);
 
 
 $('.fade').css({
