@@ -1,0 +1,29 @@
+body {
+    color: black;
+}
+
+.btn {
+    background: black;
+}
+
+.head-btn2 {
+    color: white;
+    border: none;
+}
+
+.hero_texts, h1 {
+    color: #0b1c39;
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.hero_texts, p {
+    color: white;
+}
+
+
+/*Landing page cards*/
+
+.blog-cap p {
+    color: grey;
+}

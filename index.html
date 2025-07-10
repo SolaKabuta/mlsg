@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo_mlsg.png">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom-style.css">
 </head>
 
 <body>
@@ -31,63 +32,62 @@
         <div class="preloader-inner position-relative">
             <div class="preloader-circle"></div>
             <div class="preloader-img pere-text">
-                <img src="assets/img/logo/logotype_mlsg.png" alt="">
+                <img src="assets/img/logo/logo.png" alt="">
             </div>
         </div>
     </div>
 </div>
+<!-- Preloader Start -->
 <header>
     <!-- Header Start -->
     <div class="header-area header-transparent">
         <div class="header-top header-sticky">
-            <div class="d-lg-flex justify-content-center align-items-center mx-3 ">
-                <div class="">
-                        <!-- Logo Mobile -->
-                        <div class="logo d-lg-none">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-2">
+                        <!-- Logo -->
+                        <div class="logo">
                             <a href="index.html"><img src="assets/img/logo/logotype_mlsg.png" alt=""></a>
                         </div>
-                    <div class="">
+                    </div>
+                    <div class="col-lg-9 col-md-9">
                         <div class="menu-wrapper">
                             <!-- Main-menu -->
                             <div class="main-menu">
                                 <nav class="d-none d-lg-block">
                                     <ul id="navigation">
-                                        <!-- Logo -->
-                                        <li class="logo">
-                                            <a href="index.html"><img src="assets/img/logo/logotype_mlsg.png" alt=""></a>
-                                        </li>
                                         <li><a href="index.html">Accueil</a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">1. Nos services</a></li>
+                                                <li><a href="blog.html">1. Nos Services</a></li>
                                                 <li><a href="single-blog.html">2. Diaporama</a></li>
-                                                <li><a href="job_details.html">3. Nos actualités</a></li>
+                                                <li><a href="elements.html">3. Nos actualités</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="job_listing.html">Qui sommes-nous?</a>
+                                        <li><a href="about.html">Qui sommes-nous ?</a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">1. Nos missions, notre méthode, nos valeurs</a></li>
+                                                <li><a href="blog.html">1. Nos Missions notre méthode, nos valeurs</a></li>
                                                 <li><a href="single-blog.html">2. Notre équipe</a></li>
-                                                <li><a href="job_details.html">3. Le conseil d'administration</a></li>
+                                                <li><a href="elements.html">3. Le conseil d'administration</a></li>
                                                 <li><a href="job_details.html">4. Subsides et adhésion</a></li>
-                                                <li><a href="job_details.html">5. Rapports d'activité, status, comptes annuels</a></li>
-                                            </ul>
-                                        </li>
+                                                <li><a href="job_details.html">5. Rapports d'activité, statuts, comptes annuels</a></li>
+                                            </ul></li>
                                         <li><a href="about.html">Accompagnements</a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">1. Nos services</a></li>
-                                                <li><a href="single-blog.html">2. Diaporama</a></li>
-                                                <li><a href="job_details.html">3. Nos actualités</a></li>
+                                                <li><a href="blog.html">1. Accompagnements individuel</a></li>
+                                                <li><a href="single-blog.html">2. Accompagnements social</a></li>
+                                                <li><a href="elements.html">3. Espace public numéric</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="#">Orientation</a></li>
-                                        <li><a href="#">Agenda Formations</a></li>
-                                        <li><a href="job_listing.html">Nos offres d'emploi</a></li>
-                                        <li><a href="#">Biotiful</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="contact.html">Agenda formations</a></li>
+                                        <li><a href="contact.html">Nos offres d'emploi</a></li>
+                                        <li><a href="contact.html">Biotiful</a></li>
+                                        <li class="d-lg-none"><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
-
+                                <a href="contact.html" class="d-none d-lg-block btn head-btn2 rounded">Contact</a>
+                            </div>
                         </div>
                     </div>
                     <!-- Mobile Menu -->
@@ -102,32 +102,167 @@
 </header>
 <main>
 
+    <!-- slider Area Start-->
+    <div class="slider-area ">
         <!-- Mobile Menu -->
-        <div class="">
-            <div class="container">
-                <div class="d-flex justify-content-between align-items-center gap-5">
+        <div class="slider-active">
+            <div class="single-slider slider-height d-flex align-items-center" data-background="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <div class="container">
                     <div class="row">
-                        <div class="">
-                            <div class="">
-                                <h1>Mission locale pour l'emploi de Saint-Gilles</h1>
-                                <p>Bienvenue sur le site de la Mission Locale de Saint-Gilles.</p>
-                                <p>Découvrez l'ensemble de nos services en cliquant sur le bouton ci-dessous</p>
-                            </div>
-                            <div>
-                                <button class="btn rounded">En savoir plus</button>
-                                <button class="btn rounded">Contact</button>
+                        <div class="col-xl-6 col-lg-9 col-md-10">
+                            <div class="hero_texts">
+                                <h1>Mission Locale pour l’emploi de Saint-Gilles</h1>
+                                <p>Bienvenue sur le site de la Mission Locale pour l’emploi de Saint-Gilles. </p>
+                                <p>Découvrez l’ensemble de nos services en cliquant sur le bouton ci-dessous !</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="800" height="500">
+                        <a href="about.html" class="btn rounded">En savoir plus</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- slider Area End-->
 
 
 
+    <!-- How  Apply Process Start-->
+    <div class="apply-process-area apply-bg pt-150 pb-150" data-background="assets/img/gallery/how-applybg.png">
+        <div class="container">
+            <!-- Section Tittle -->
+
+            <!-- Apply Process Caption -->
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-process text-center mb-30">
+                        <div class="process-ion">
+                            <span class="flaticon-search"></span>
+                        </div>
+                        <div class="process-cap">
+                            <h5>Accompagnement vers l’emploi</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-process text-center mb-30">
+                        <div class="process-ion">
+                            <span class="flaticon-curriculum-vitae"></span>
+                        </div>
+                        <div class="process-cap">
+                            <h5>Orientation et découvertes métiers</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-process text-center mb-30">
+                        <div class="process-ion">
+                            <span class="flaticon-tour"></span>
+                        </div>
+                        <div class="process-cap">
+                            <h5>Services aux <br> entreprises</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- How  Apply Process End-->
+
+
+    <!-- Blog Area Start -->
+    <div class="home-blog-area blog-h-padding">
+        <div class="container">
+            <!-- Section Tittle -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-tittle text-center">
+                        <h2>Nos actualités</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="home-blog-single mb-30">
+                        <div class="blog-img-cap">
+                            <div class="blog-img">
+                                <img src="assets/img/gallery/note.png" alt="" height="755">
+                                <!-- Blog date -->
+                                <div class="blog-date text-center">
+                                    <span>29</span>
+                                    <p>Septembre</p>
+                                </div>
+                            </div>
+                            <div class="blog-cap">
+                                <h3><a href="#">Atelier pour vous orienter professionnellement </a></h3>
+                                <p>Dès le 29 septembre : un atelier collectif (12 personnes) pour clarifier vos envies et donner du...</p>
+                                <a href="#" class="more-btn">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="home-blog-single mb-30">
+                        <div class="blog-img-cap">
+                            <div class="blog-img">
+                                <img src="assets/img/gallery/sparks.png" alt="">
+                                <!-- Blog date -->
+                                <div class="blog-date text-center">
+                                    <span>23</span>
+                                    <p>Septembre</p>
+                                </div>
+                            </div>
+                            <div class="blog-cap">
+                                <h3><a href="single-blog.html"> Découvrir et se former aux métiers techniques du bâtiment </a></h3>
+                                <p>A partir du 22 septembre, explorez des professions stimulantes qui allient savoir-faire,...</p>
+                                <a href="#" class="more-btn">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="home-blog-single mb-30">
+                        <div class="blog-img-cap">
+                            <div class="blog-img">
+                                <img src="assets/img/gallery/clean.png" alt="">
+                                <!-- Blog date -->
+                                <div class="blog-date text-center">
+                                    <span>24</span>
+                                    <p>Now</p>
+                                </div>
+                            </div>
+                            <div class="blog-cap">
+                                <h3><a href="single-blog.html">Travailler dans le secteur de l’aide ménagère (Titres-services)</a></h3>
+                                <p>Découverte métiers et formation du 15 septembre au 28 novembre avec CFS asbl. Job à la clé !</p>
+                                <a href="#" class="more-btn">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="home-blog-single mb-30">
+                        <div class="blog-img-cap">
+                            <div class="blog-img">
+                                <img src="assets/img/gallery/food.png" alt="">
+                                <!-- Blog date -->
+                                <div class="blog-date text-center">
+                                    <span>24</span>
+                                    <p>Now</p>
+                                </div>
+                            </div>
+                            <div class="blog-cap">
+                                <h3><a href="single-blog.html">Trajet Emploi – Alimentation durable : JobDay 16</a></h3>
+                                <p>Le Trajet Emploi continue, de nouvelles dates seront prochainement communiquées. Bienvenue...</p>
+                                <a href="#" class="more-btn">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Area End -->
 
 </main>
 <footer>
@@ -139,10 +274,9 @@
                     <div class="single-footer-caption mb-50">
                         <div class="single-footer-caption mb-30">
                             <div class="footer-tittle">
-                                <h4>About Us</h4>
+                                <h4>Comment s’inscrire à la Mission Locale de Saint-Gilles ? </h4>
                                 <div class="footer-pera">
-                                    <p>Heaven frucvitful doesn't cover lesser dvsays appear creeping seasons so
-                                        behold.</p>
+                                    <p>Les nouvelles inscriptions se font tous les jours uniquement sur rendez-vous (ou au 02/542.63.21), dans nos locaux de la chaussée de Waterloo, 255 (2e étage) .</p>
                                 </div>
                             </div>
                         </div>
@@ -152,14 +286,13 @@
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                     <div class="single-footer-caption mb-50">
                         <div class="footer-tittle">
-                            <h4>Contact Info</h4>
+                            <h4>Info de contact</h4>
                             <ul>
                                 <li>
-                                    <p>Address :Your address goes
-                                        here, your demo address.</p>
+                                    <p>Address : Chau. de Waterloo 255, 1060 Saint-Gilles.</p>
                                 </li>
-                                <li><a href="#">Phone : +8880 44338899</a></li>
-                                <li><a href="#">Email : info@colorlib.com</a></li>
+                                <li><a href="#">Téléphone : 02 542 63 21</a></li>
+                                <li><a href="#">Email : info@mlsg.com</a></li>
                             </ul>
                         </div>
 
@@ -168,91 +301,62 @@
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                     <div class="single-footer-caption mb-50">
                         <div class="footer-tittle">
-                            <h4>Important Link</h4>
+                            <h4>Menu</h4>
                             <ul>
-                                <li><a href="#"> View Project</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Testimonial</a></li>
-                                <li><a href="#">Proparties</a></li>
-                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Accueil</a></li>
+                                <li><a href="#">Qui sommes-nous ?</a></li>
+                                <li><a href="#">Accompagnements</a></li>
+                                <li><a href="#">Orientation</a></li>
+                                <li><a href="#">Agenda formations</a></li>
+                                <li><a href="#">Nos offres d'emploi</a></li>
+                                <li><a href="#">Biotiful</a></li>
+                                <li><a href="#">Contact</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                    <div class="single-footer-caption mb-50">
-                        <div class="footer-tittle">
-                            <h4>Newsletter</h4>
-                            <div class="footer-pera footer-pera2">
-                                <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
-                            </div>
-                            <!-- Form -->
-                            <div class="footer-form">
-                                <div id="mc_embed_signup">
-                                    <form target="_blank"
-                                          action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                          method="get" class="subscribe_form relative mail_part">
-                                        <input type="email" name="email" id="newsletter-form-email"
-                                               placeholder="Email Address"
-                                               class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
-                                               onblur="this.placeholder = ' Email Address '">
-                                        <div class="form-icon">
-                                            <button type="submit" name="submit" id="newsletter-submit"
-                                                    class="email_icon newsletter-submit button-contactForm"><img
-                                                    src="assets/img/icon/form.png" alt=""></button>
-                                        </div>
-                                        <div class="mt-10 info"></div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <!--  -->
             <div class="row footer-wejed justify-content-between">
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <!-- logo -->
                     <div class="footer-logo mb-20">
-                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                        <a href="index.html"><img src="assets/img/logo/logotype_mlsg_white.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                     <div class="footer-tittle-bottom">
                         <span>5000+</span>
-                        <p>Talented Hunter</p>
+                        <p>Accompagnements</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                     <div class="footer-tittle-bottom">
                         <span>451</span>
-                        <p>Talented Hunter</p>
+                        <p>Employés</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                     <!-- Footer Bottom Tittle -->
                     <div class="footer-tittle-bottom">
                         <span>568</span>
-                        <p>Talented Hunter</p>
+                        <p>Collaborateurs</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- footer-bottom area -->
-    <div class="footer-bottom-area footer-bg">
+   <!-- <div class="footer-bottom-area footer-bg">
         <div class="container">
             <div class="footer-border">
                 <div class="row d-flex justify-content-between align-items-center">
                     <div class="col-xl-10 col-lg-10 ">
                         <div class="footer-copy-right">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                                All rights reserved | This template is made with <i class="fa fa-heart"
-                                                                                    aria-hidden="true"></i> by <a
-                                        href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
+                            <p>&lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                &lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;</p>
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-2">
@@ -266,10 +370,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Footer End-->
 </footer>
-
 
 <!-- JS here -->
 
