@@ -196,4 +196,32 @@ function formatDate(dateStr) {
 document.addEventListener('DOMContentLoaded', initCalendar);
 
 
-// Animation d'entrée du calendrier
+// reveal each card with a delay on scroll
+
+$(document).ready(function() {
+    const $cards = $('.card-job');
+    const revealDelay = 120; // Delay in milliseconds
+
+
+    $(window).on('scroll', function() {
+      $cards.each(function(index) {
+        const $card = $(this);
+        if ($card.is(':visible') && isElementInViewport($card)) {
+          setTimeout(function() {
+            $card.addClass('reveal');
+          }, index * revealDelay);
+        }
+      });
+    });
+
+    function isElementInViewport(el) {
+      const rect = el[0].getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  }
+);
