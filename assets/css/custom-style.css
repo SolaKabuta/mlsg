@@ -1,10 +1,11 @@
 body {
     color: black;
+    scroll-behavior: smooth;
 }
 
 /*Nav*/
 
-a {
+.blue {
     color:  rgb(0,168, 159)
 }
 
@@ -13,6 +14,8 @@ a {
 .btn {
     background: rgb(0,168, 159);
 }
+
+
 
 /*.btn:hover {
     background: rgb(227, 0, 86 )
