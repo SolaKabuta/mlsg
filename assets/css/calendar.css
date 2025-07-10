@@ -16,6 +16,7 @@ body {
 
 .btn {
   background-color: rgb(0,168,159);
+  border-radius: 5px;
 }
 
 .calendar-container {
@@ -169,6 +170,27 @@ body {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
+}
+
+.calendar-day {
+  position: relative;
+}
+
+.calendar-container {
+  animation: slideIn 1.2s;
+}
+
+@keyframes slideIn {
+  0%{
+    opacity: 0;
+    transform: translateY(500px);
+
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
 }
 
 /* Card */

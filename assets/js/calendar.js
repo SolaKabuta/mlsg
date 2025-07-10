@@ -195,3 +195,5 @@ function formatDate(dateStr) {
 // Initialiser le calendrier au chargement de la page
 document.addEventListener('DOMContentLoaded', initCalendar);
 
+
+// Animation d'entrée du calendrier
