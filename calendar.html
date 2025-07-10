@@ -24,6 +24,176 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
+<style>
+  :root {
+    --primary-color: #1a5a96; /* Bleu administratif */
+    --secondary-color: #f8f9fa;
+    --accent-color: #e9ecef;
+    --text-color: #212529;
+    --event-color-1: #4e79a7;
+    --event-color-2: #f28e2b;
+    --event-color-3: #e15759;
+    --event-color-4: #76b7b2;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+  }
+
+  .calendar-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .calendar-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .calendar-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+  }
+
+  .calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: var(--secondary-color);
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #dee2e6;
+  }
+
+  .calendar-day {
+    min-height: 100px;
+    background-color: white;
+    padding: 0.5rem;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .calendar-day:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.02);
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .day-number {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .event {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .event-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 4px;
+  }
+
+  .other-month {
+    background-color: var(--secondary-color);
+    color: #adb5bd;
+  }
+
+  .today {
+    background-color: rgba(26, 90, 150, 0.1);
+    border: 1px solid var(--primary-color);
+  }
+
+  .event-modal .modal-header {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  .event-type {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .calendar-weekdays, .calendar-day {
+      font-size: 0.8rem;
+    }
+
+    .calendar-day {
+      min-height: 70px;
+      padding: 0.3rem;
+    }
+
+    .event {
+      font-size: 0.7rem;
+    }
+
+    .day-number {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .calendar-weekdays {
+      display: none;
+    }
+
+    .calendar-days {
+      grid-template-columns: 1fr;
+    }
+
+    .calendar-day {
+      min-height: auto;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .other-month {
+      display: none;
+    }
+
+    .day-number {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>
+
 <body>
 <!-- Preloader Start -->
 <div id="preloader-active">
@@ -134,7 +304,64 @@
 
   <!-- Calendar Start -->
 
+  <div class="container my-5">
+    <div class="calendar-container">
+      <div class="calendar-header">
+        <h1 class="calendar-title">Calendrier des activités</h1>
+        <p class="mb-0">Mission Locale de Saint-Gilles</p>
+      </div>
 
+      <div class="calendar-nav">
+        <button id="prev-month" class="btn btn-sm btn-outline-primary">
+          <i class="fas fa-chevron-left me-1"></i> Mois précédent
+        </button>
+        <h2 id="current-month" class="mb-0 fs-5 fw-bold">Mois Année</h2>
+        <button id="next-month" class="btn btn-sm btn-outline-primary">
+          Mois suivant <i class="fas fa-chevron-right ms-1"></i>
+        </button>
+      </div>
+
+      <div class="calendar-weekdays">
+        <div>Lundi</div>
+        <div>Mardi</div>
+        <div>Mercredi</div>
+        <div>Jeudi</div>
+        <div>Vendredi</div>
+        <div>Samedi</div>
+        <div>Dimanche</div>
+      </div>
+
+      <div id="calendar-days" class="calendar-days">
+        <!-- Les jours seront générés par JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal pour afficher les détails de l'événement -->
+  <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eventModalLabel">Détails de l'événement</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4 id="event-title" class="mb-3"></h4>
+          <p><i class="far fa-calendar-alt me-2"></i> <span id="event-date"></span></p>
+          <p><i class="far fa-clock me-2"></i> <span id="event-time"></span></p>
+          <p><i class="fas fa-map-marker-alt me-2"></i> <span id="event-location"></span></p>
+          <div class="mb-3">
+            <span id="event-type" class="event-type"></span>
+          </div>
+          <p id="event-description"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary">S'inscrire</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Calendar End -->
   <!-- Online CV Area Start -->
@@ -622,6 +849,208 @@
 <!-- Jquery Plugins, main Jquery -->
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Données des événements (peut être remplacé par un appel API ou un fichier JSON)
+  const eventsData = [
+    {
+      id: 1,
+      title: "Atelier CV",
+      date: "2025-07-15",
+      time: "14:00 - 16:00",
+      location: "Salle de réunion 1",
+      description: "Atelier pour apprendre à rédiger un CV efficace et adapté au marché du travail actuel.",
+      type: "Atelier",
+      color: "var(--event-color-1)"
+    },
+    {
+      id: 2,
+      title: "Entretiens individuels",
+      date: "2023-11-20",
+      time: "09:00 - 12:00",
+      location: "Bureau des conseillers",
+      description: "Entretiens individuels avec les conseillers pour faire le point sur votre parcours.",
+      type: "Rendez-vous",
+      color: "var(--event-color-2)"
+    },
+    {
+      id: 3,
+      title: "Forum des métiers",
+      date: "2023-11-22",
+      time: "10:00 - 17:00",
+      location: "Espace polyvalent",
+      description: "Découverte des différents métiers et rencontres avec des professionnels.",
+      type: "Événement",
+      color: "var(--event-color-3)"
+    },
+    {
+      id: 4,
+      title: "Formation numérique",
+      date: "2023-11-25",
+      time: "13:30 - 16:30",
+      location: "Salle informatique",
+      description: "Formation aux outils numériques essentiels pour la recherche d'emploi.",
+      type: "Formation",
+      color: "var(--event-color-4)"
+    },
+    {
+      id: 5,
+      title: "Réunion d'information",
+      date: "2023-11-28",
+      time: "18:00 - 20:00",
+      location: "Salle principale",
+      description: "Présentation des nouveaux programmes et services de la mission locale.",
+      type: "Réunion",
+      color: "var(--event-color-1)"
+    },
+
+  ];
+
+  // Variables globales
+  let currentDate = new Date();
+  let currentMonth = currentDate.getMonth();
+  let currentYear = currentDate.getFullYear();
+
+  // Éléments du DOM
+  const calendarDays = document.getElementById('calendar-days');
+  const currentMonthElement = document.getElementById('current-month');
+  const prevMonthBtn = document.getElementById('prev-month');
+  const nextMonthBtn = document.getElementById('next-month');
+  const eventModal = new bootstrap.Modal(document.getElementById('eventModal'));
+
+  // Initialisation du calendrier
+  function initCalendar() {
+    updateCalendar();
+
+    // Écouteurs d'événements
+    prevMonthBtn.addEventListener('click', () => {
+      currentMonth--;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      }
+      updateCalendar();
+    });
+
+    nextMonthBtn.addEventListener('click', () => {
+      currentMonth++;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      }
+      updateCalendar();
+    });
+  }
+
+  // Mettre à jour le calendrier
+  function updateCalendar() {
+    // Mettre à jour le titre du mois
+    const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+      "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+    currentMonthElement.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+
+    // Calculer le premier jour du mois et le nombre de jours dans le mois
+    const firstDay = new Date(currentYear, currentMonth, 1);
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+    // Calculer le jour de la semaine du premier jour (0 = dimanche, 1 = lundi, etc.)
+    let firstDayOfWeek = firstDay.getDay();
+    // Ajuster pour que la semaine commence le lundi (1)
+    firstDayOfWeek = firstDayOfWeek === 0 ? 6 : firstDayOfWeek - 1;
+
+    // Calculer le nombre de jours du mois précédent à afficher
+    const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
+
+    // Effacer le calendrier actuel
+    calendarDays.innerHTML = '';
+
+    // Ajouter les jours du mois précédent
+    for (let i = 0; i < firstDayOfWeek; i++) {
+      const day = document.createElement('div');
+      day.className = 'calendar-day other-month';
+      day.textContent = prevMonthDays - firstDayOfWeek + i + 1;
+      calendarDays.appendChild(day);
+    }
+
+    // Ajouter les jours du mois actuel
+    const today = new Date();
+    for (let i = 1; i <= daysInMonth; i++) {
+      const day = document.createElement('div');
+      day.className = 'calendar-day';
+
+      // Vérifier si c'est aujourd'hui
+      if (i === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
+        day.classList.add('today');
+      }
+
+      // Numéro du jour
+      const dayNumber = document.createElement('div');
+      dayNumber.className = 'day-number';
+      dayNumber.textContent = i;
+      day.appendChild(dayNumber);
+
+      // Ajouter les événements pour ce jour
+      const currentDateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+      const dayEvents = eventsData.filter(event => event.date === currentDateStr);
+
+      dayEvents.forEach(event => {
+        const eventElement = document.createElement('div');
+        eventElement.className = 'event';
+        eventElement.style.backgroundColor = `${event.color}20`;
+        eventElement.style.borderLeft = `3px solid ${event.color}`;
+        eventElement.innerHTML = `
+                        <span class="event-dot" style="background-color: ${event.color}"></span>
+                        ${event.title}
+                    `;
+
+        // Ajouter un gestionnaire d'événements pour afficher les détails
+        eventElement.addEventListener('click', () => showEventDetails(event));
+
+        day.appendChild(eventElement);
+      });
+
+      calendarDays.appendChild(day);
+    }
+
+    // Calculer le nombre de jours du mois suivant à afficher
+    const totalDaysDisplayed = firstDayOfWeek + daysInMonth;
+    const nextMonthDaysToShow = totalDaysDisplayed <= 35 ? 35 - totalDaysDisplayed : 42 - totalDaysDisplayed;
+
+    // Ajouter les jours du mois suivant
+    for (let i = 1; i <= nextMonthDaysToShow; i++) {
+      const day = document.createElement('div');
+      day.className = 'calendar-day other-month';
+      day.textContent = i;
+      calendarDays.appendChild(day);
+    }
+  }
+
+  // Afficher les détails de l'événement dans une modal
+  function showEventDetails(event) {
+    document.getElementById('event-title').textContent = event.title;
+    document.getElementById('event-date').textContent = formatDate(event.date);
+    document.getElementById('event-time').textContent = event.time;
+    document.getElementById('event-location').textContent = event.location;
+    document.getElementById('event-type').textContent = event.type;
+    document.getElementById('event-type').style.backgroundColor = event.color;
+    document.getElementById('event-description').textContent = event.description;
+
+    eventModal.show();
+  }
+
+  // Formater la date en français
+  function formatDate(dateStr) {
+    const date = new Date(dateStr);
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('fr-FR', options);
+  }
+
+  // Initialiser le calendrier au chargement de la page
+  document.addEventListener('DOMContentLoaded', initCalendar);
+</script>
 
 </body>
 </html>
