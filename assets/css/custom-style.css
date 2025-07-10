@@ -11,6 +11,12 @@ body {
     border: none;
 }
 
-.hero__caption {
-    color: red;
+.hero_texts, h1 {
+    color: #0b1c39;
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.hero_texts, p {
+    color: white;
 }
