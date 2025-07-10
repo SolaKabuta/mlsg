@@ -186,7 +186,7 @@ body {
 
 
 .card img {
-  filter: brightness(70%);
+  filter: brightness(70%) blur(1px);
 }
 
 .card p {
@@ -197,6 +197,17 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform: scale(1.02);
+
+}
+
+
+.card .ville {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: rgb(227, 0, 86);
+  width: 60px;
+  border-radius: 5px;
+  text-align: center;
 
 }
 
