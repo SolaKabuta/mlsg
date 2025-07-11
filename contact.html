@@ -149,8 +149,10 @@
                     <div class="col-12">
                         <h2 class="play contact-title mb-5 mt-5 mt-md-0">Contactez-Nous</h2>
                     </div>
+                    <div id="bug"></div>
+                    <div id="yes"></div> 
                     <div class="col-lg-12">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post"
+                        <form id="form" class="form-contact contact_form" action="contact.html" method="get"
                             id="contactForm" novalidate="novalidate">
                             <div class="row">
 
@@ -187,6 +189,8 @@
                                             placeholder=" Enter Message"></textarea>
                                     </div>
                                 </div>
+
+                                <div id="score" class="play text-secondary mb-2"></div>
 
                             </div>
                             <div class=" play form-group mb-5">
@@ -230,14 +234,14 @@
 
                     <div id="carte" style="width: 100%; height: 40vh;" class=" play  col-lg-7 rounded-4 shadow"></div>
                     <script>
-                        let map = L.map('carte').setView([50.82472, 4.34889], 18);
+                        let map = L.map('carte').setView([50.824747350587835, 4.348803660746125], 18);
 
                         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         }).addTo(map);
 
-                        L.marker([51.505, -0.09]).addTo(map)
-                            .bindPopup('Chau. de Waterloo 255 (2e étage) <br/>1060 Saint-Gilles')
+                        L.marker([50.824747350587835, 4.348803660746125]).addTo(map)
+                            .bindPopup('<a href="https://www.google.com/maps/@50.8247009,4.3487318,21z?entry=ttu&g_ep=EgoyMDI1MDcwOC4wIKXMDSoASAFQAw%3D%3D">Chau. de Waterloo 255 (2e étage) <br/>1060 Saint-Gilles</a>')
                             .openPopup();
                     </script>
                 </div>
@@ -399,12 +403,13 @@
             @keyframes pageslide3 {
                 0% {
                     scale: 0.8;
+                    transform: translateY(100px);
                     opacity: 0;
 
                 }
 
                 100% {
-
+                    transform: translateY(0px);
                     scale: 1;
                     opacity: 1;
                 }
@@ -456,54 +461,52 @@
 
     const form = document.getElementById("form");
     const yes = document.getElementById("yes");
-    const firstname = document.getElementById("name")
-    const lastname = document.getElementById("lastname")
-    const usermail = document.getElementById("usermail")
-    const postcode = document.getElementById("postcode")
-    const phone = document.getElementById("phone")
+    const nom = document.getElementById("name")
+    const usermail = document.getElementById("email")
+    const subject = document.getElementById("subject")
     const message = document.getElementById("message")
     const bug = document.getElementById("bug");
-
     const usermailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
-    const postcodeRegex = /^\d{4}$/;
-    const phoneRegex = /^04\d{8}$/;
-    const messageRegex = /^[a-zA-Z0-9 ]{1,300}$/;
+    const messageRegex = /^[^<>]{1,500}$/;
+    const subjectRegex = /^[^<>]{1,50}$/;
 
 
     function ausermailRegex(a) {
         console.log(a.value);
         return usermailRegex.test(a.value);
     }
-    function apostcodeRegex(a) {
-        console.log(a.value);
-        return postcodeRegex.test(a.value);
-    }
-    function aphoneRegex(a) {
-        console.log(a.value);
-        return phoneRegex.test(a.value);
-    }
+
     function amessageRegex(a) {
         console.log(a.value);
         return messageRegex.test(a.value);
+    }
+
+    function asubjectRegex(a) {
+        console.log(a.value);
+        return subjectRegex.test(a.value);
     }
 
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         if (!ausermailRegex(usermail)) {
-            bug.innerHTML = '<span style="background: red;">Le email est incorrect</span>';
-            yes.innerHTML = '<span style="color: red;">Message non enrigstré</span>';
-        } else if (!apostcodeRegex(postcode)) {
-            bug.innerHTML = '<span style="background: red;">Le code postal est incorrect</span>';
-            yes.innerHTML = '<span style="color: red;">Message non enrigstré</span>';
-        } else if (!aphoneRegex(phone)) {
-            bug.innerHTML = '<span style="background: red;">Le numéro est incorrect</span>';
-            yes.innerHTML = '<span style="color: red;">Message non enrigstré</span>';
+            bug.innerHTML = "<div class='alert alert-warning'>L'email est incorrect</div>";
         } else if (!amessageRegex(message)) {
-            bug.innerHTML = '<span style="background: red;">Le message est incorrect</span>';
-            yes.innerHTML = '<span style="color: red;">Message non enrigstré</span>';
+            bug.innerHTML = "<div class='alert alert-warning'>Le message n'est pas conforme incorrect</div>";
+        } else if (!asubjectRegex(subject)) {
+            bug.innerHTML = "<div class='alert alert-warning'>Le objet est incorrect</div>";
+             
+        } else if (!asubjectRegex(nom)) {
+            bug.innerHTML = "<div class='alert alert-warning'>Le nom est incorrect</div>";            
+        } else  {
+            bug.innerHTML = "";    
+            yes.innerHTML = '<div class="alert alert-success">Message envoyé</div>';
+            setTimeout(function () {
+                form.submit()
+            },1500);       
         }
-        form.submit()
+        
+        
     })
 
 
@@ -516,12 +519,12 @@
 
         compte = text.length;
         score.innerHTML = compte + "/300"
-        if (text.length >= 300) {
+        if (text.length >= 500) {
             textReduit = text.substring(0, text.length - (text.length - 298))
             message.value = textReduit;
             console.log("c'est trop long");
         }
-
+    });
 </script>
 
 </html>
