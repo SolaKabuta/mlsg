@@ -254,6 +254,7 @@ html {
   font-weight: 500;
 }
 
+
 .card:hover {
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -272,6 +273,11 @@ html {
 
 }
 
+h5 {
+  font-weight: 600;
+  color: whitesmoke;
+}
+
 .card-job {
   opacity: 0;
   transform: translateY(40px);
@@ -281,4 +287,12 @@ html {
 .card-job.reveal {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+.fixed-img {
+  height: 200px; /* tu peux ajuster à 250px, 180px, etc. */
+  object-fit: cover;
+  width: 700px;
+
 }
