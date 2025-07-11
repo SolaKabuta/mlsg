@@ -144,13 +144,13 @@
         <section id="cielBas" class="d-flex justify-content-center align-items-center mt-5 mt-md-0"
             style="height: 50vh;">
             <div class="container mt-5 mt-md-0">
-                    <div class="nua d-flex" id="nua1"><div>🌱 Économie humaine</div></div>
-                    <div class="nua d-flex" id="nua2"><div>🤝 Emploi local</div></div>
-                    <div class="nua d-flex" id="nua3"><div>🧑‍🌾 Agriculture solidaire</div></div>
-                    <div class="nua d-flex" id="nua4"><div>🌍 Circuit court</div></div>
-                    <div class="nua d-flex" id="nua5"><div>💡 Savoir-faire partagé</div></div>
-                    <div class="nua d-flex" id="nua6"><div>🧡 Vivre ensemble</div></div>
-                    <div class="nua d-flex" id="nua7"><div>♻️ Projet durable</div></div>
+                    <div class="nuaBlock d-flex" id="nuaBlock1"><div class="nua d-flex" id="nua1"><div>🌱 Économie humaine</div></div></div>
+                    <div class="nuaBlock d-flex" id="nuaBlock2"><div class="nua d-flex" id="nua2"><div>🤝 Emploi local</div></div></div>
+                    <div class="nuaBlock d-flex" id="nuaBlock3"><div class="nua d-flex" id="nua3"><div>🧑‍🌾 Agriculture solidaire</div></div></div>
+                    <div class="nuaBlock d-flex" id="nuaBlock4"><div class="nua d-flex" id="nua4"><div>🌍 Circuit court</div></div></div>
+                    <div class="nuaBlock d-flex" id="nuaBlock5"><div class="nua d-flex" id="nua5"><div>💡 Savoir-faire partagé</div></div></div>
+                    <div class="nuaBlock d-flex" id="nuaBlock6"><div class="nua d-flex" id="nua6"><div>🧡 Vivre ensemble</div></div></div>
+                    <div class="nuaBlock d-flex" id="nuaBlock7"><div class="nua d-flex" id="nua7"><div>♻️ Projet durable</div></div></div>
 
             </div>
         </section>
@@ -174,72 +174,138 @@
 
             }
 
-            .nua {
+            .nuaBlock {
                 position: absolute;
-                background: #fff;
+
                 border-radius: 50% 50%;
                 opacity: 0.9;
-                animation: float linear infinite;
+
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                color: #517eaf;
+                animation: wave 1s linear infinite, float linear infinite;
             }
 
+            .nua {
+
+                background: #fff;
+                border-radius: 50% 50%;
+                opacity: 0.9;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #517eaf;
+                animation: wave 1s linear infinite;
+            }
+
+            /* Animation de changement de bordure */
+            @keyframes wave {
+                20% {
+                    border-radius: 45% 45% 42% 28% / 45% 51% 49% 47%;
+                }
+                40% {
+                    border-radius: 45% 55% 49% 51% / 46% 51% 49% 64%;
+                }
+                60% {
+                    border-radius: 60% 40% 57% 44% / 47% 62% 48% 54%;
+                }
+                80% {
+                    border-radius: 60% 70% 52% 68% / 48% 46% 64% 62%;
+                }
+            }
             #nua1 {
                 width: 520px;
                 height: 260px;
-                top: 30px;
-                left: -450px;
-                animation-duration: 45s;
+
+                animation-duration: 20s;
             }
 
             #nua2 {
                 width: 480px;
                 height: 260px;
-                top: 80px;
-                left: -500px;
-                animation-duration: 30s;
+
+                animation-duration: 15s;
             }
 
             #nua3 {
                 width: 320px;
                 height: 180px;
-                top: 150px;
-                left: -420px;
-                animation-duration: 35s;
+
+                animation-duration: 10s;
             }
 
             #nua4 {
                 width: 540px;
                 height: 150px;
-                top: 200px;
-                left: -450px;
-                animation-duration: 70s;
+
+                animation-duration: 15s;
             }
 
             #nua5 {
                 width: 440px;
                 height: 250px;
-                top: 200px;
-                left: -500px;
-                animation-duration: 50s;
+
+                animation-duration: 10s;
             }
 
             #nua6 {
                 width: 340px;
                 height: 100px;
-                top: 200px;
-                left: -450px;
-                animation-duration: 95s;
+
+                animation-duration: 15s;
             }
 
             #nua7 {
                 width: 500px;
                 height: 300px;
+
+                animation-duration: 10s;
+            }
+            
+            #nuaBlock1 {
+                top: 30px;
+                left: -450px;
+                animation-duration: 45s;
+            }
+
+            #nuaBlock2 {
+                top: 80px;
+                left: -500px;
+                animation-duration: 30s;
+            }
+
+            #nuaBlock3 {
+                top: 150px;
+                left: -420px;
+                animation-duration: 35s;
+            }
+
+            #nuaBlock4 {
+                top: 200px;
+                left: -450px;
+                animation-duration: 70s;
+            }
+
+            #nuaBlock5 {
+                top: 200px;
+                left: -500px;
+                animation-duration: 50s;
+            }
+
+            #nuaBlock6 {
+                top: 200px;
+                left: -450px;
+                animation-duration: 95s;
+            }
+
+            #nuaBlock7 {
                 top: 200px;
                 left: -450px;
                 animation-duration: 55s;
             }
+
 
             @keyframes float {
                 to {
