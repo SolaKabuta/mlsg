@@ -1,3 +1,9 @@
+#content {
+  transition: all 0.25s ease-in-out;
+}
+
+
+
 .card {
 
   transition: transform 0.2s ease-in-out;
@@ -7,4 +13,75 @@
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform: scale(1.02);
+}
+
+
+.card {
+  animation: slideIn 2.2s;
+}
+
+.job-category-listing {
+  animation: slideInLeft 2.2s;
+}
+
+.carousel {
+  animation: opacity 3s;
+}
+
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideInLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-500px);
+
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+}
+@keyframes slideIn {
+  0%{
+    opacity: 0;
+    transform: translateY(500px);
+
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+}
+
+.carousel-img-fix {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+
+.blurred-bg img {
+  filter: brightness(70%) blur(8px);
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.carousel-caption {
+  z-index: 1;
+  position: relative;
 }

@@ -23,7 +23,7 @@ const eventsData = [
   {
     id: 3,
     title: "Forum des métiers",
-    date: "2023-11-22",
+    date: "2025-07-25",
     time: "10:00 - 17:00",
     location: "Espace polyvalent",
     description: "Découverte des différents métiers et rencontres avec des professionnels.",
@@ -195,3 +195,33 @@ function formatDate(dateStr) {
 // Initialiser le calendrier au chargement de la page
 document.addEventListener('DOMContentLoaded', initCalendar);
 
+
+// reveal each card with a delay on scroll
+
+$(document).ready(function() {
+    const $cards = $('.card-job');
+    const revealDelay = 120; // Delay in milliseconds
+
+
+    $(window).on('scroll', function() {
+      $cards.each(function(index) {
+        const $card = $(this);
+        if ($card.is(':visible') && isElementInViewport($card)) {
+          setTimeout(function() {
+            $card.addClass('reveal');
+          }, index * revealDelay);
+        }
+      });
+    });
+
+    function isElementInViewport(el) {
+      const rect = el[0].getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  }
+);

@@ -44,85 +44,118 @@
     <!-- Header Start -->
     <div class="header-area header-transparent">
         <div class="header-top header-sticky">
-            <div class="d-lg-flex justify-content-center align-items-center mx-3 ">
-                <div class="">
-                        <!-- Logo Mobile -->
-                        <div class="logo d-lg-none">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-2">
+                        <!-- Logo -->
+                        <div class="logo">
                             <a href="index.html"><img src="assets/img/logo/logotype_mlsg.png" alt=""></a>
                         </div>
-                    <div class="">
+                    </div>
+                    <div class="col-lg-10 col-md-10">
                         <div class="menu-wrapper">
                             <!-- Main-menu -->
                             <div class="main-menu">
                                 <nav class="d-none d-lg-block">
                                     <ul id="navigation">
-                                        <!-- Logo -->
-                                        <li class="logo">
-                                            <a href="index.html"><img src="assets/img/logo/logotype_mlsg.png" alt=""></a>
-                                        </li>
                                         <li><a href="index.html">Accueil</a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">1. Nos services</a></li>
+                                                <li><a href="blog.html">1. Nos Services</a></li>
                                                 <li><a href="single-blog.html">2. Diaporama</a></li>
-                                                <li><a href="job_details.html">3. Nos actualités</a></li>
+                                                <li><a href="elements.html">3. Nos actualités</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="job_listing.html">Qui sommes-nous?</a>
+                                        <li><a href="about.html">Qui sommes-nous ?</a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">1. Nos missions, notre méthode, nos valeurs</a></li>
+                                                <li><a href="blog.html">1. Nos Missions notre méthode, nos valeurs</a></li>
                                                 <li><a href="single-blog.html">2. Notre équipe</a></li>
-                                                <li><a href="job_details.html">3. Le conseil d'administration</a></li>
+                                                <li><a href="elements.html">3. Le conseil d'administration</a></li>
                                                 <li><a href="job_details.html">4. Subsides et adhésion</a></li>
-                                                <li><a href="job_details.html">5. Rapports d'activité, status, comptes annuels</a></li>
-                                            </ul>
-                                        </li>
+                                                <li><a href="job_details.html">5. Rapports d'activité, statuts, comptes annuels</a></li>
+                                            </ul></li>
                                         <li><a href="accompagnements.html">Accompagnements</a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">1. Nos services</a></li>
-                                                <li><a href="single-blog.html">2. Diaporama</a></li>
-                                                <li><a href="job_details.html">3. Nos actualités</a></li>
+                                                <li><a href="accompagnements.html">1. Accompagnements individuel</a></li>
+                                                <li><a href="single-blog.html">2. Accompagnements social</a></li>
+                                                <li><a href="elements.html">3. Espace public numéric</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="#">Orientation</a></li>
-                                        <li><a href="#">Agenda Formations</a></li>
+                                        <li><a href="calendar.html">Agenda formations</a></li>
                                         <li><a href="job_listing.html">Nos offres d'emploi</a></li>
-                                        <li><a href="#">Biotiful</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="contact.html">Biotiful</a></li>
+                                        <li class="d-lg-none"><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
-
+                            <a href="contact.html" class="d-none d-lg-block btn head-btn2 rounded">Contact</a>
                         </div>
                     </div>
-                    <!-- Mobile Menu -->
-                    <div class="col-12">
-                        <div class="mobile_menu d-block d-lg-none"></div>
-                    </div>
+                </div>
+                <!-- Mobile Menu -->
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Header End -->
 </header>
     <main>
 
         <!-- Hero-slider Area Start-->
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" style="max-height:400px; overflow:hidden;">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/img/gallery/cv_bg.jpg" class="d-block w-100" alt="...">
+
+                <div class="carousel-item active position-relative" style="height: 400px;">
+                    <!-- Image floutée -->
+                    <div class="blurred-bg position-absolute top-0 start-0 w-100 h-100">
+                        <img src="assets/img/gallery/sparks.png" alt="..." class="w-100 h-100 object-fit-cover">
+                    </div>
+
+                    <!-- Texte superposé -->
+                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                        <h2 class="text-light fw-bold">Trouvez votre prochain emploi</h2>
+                        <p class="text-light fs-5">Des opportunités locales vous attendent à Saint-Gilles</p>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="assets/img/gallery/cv_bg.jpg" class="d-block w-100 h-100" alt="...">
+
+                <div class="carousel-item position-relative" style="height: 400px;">
+                    <!-- Image floutée -->
+                    <div class="blurred-bg position-absolute top-0 start-0 w-100 h-100">
+                        <img src="assets/img/gallery/cv_bg.jpg" alt="..." class="w-100 h-100 object-fit-cover">
+                    </div>
+
+                    <!-- Texte superposé -->
+                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                        <h2 class="text-light fw-bold">Donnez un nouvel élan à votre avenir</h2>
+                        <p class="text-light fs-5">Formations, conseils, et accompagnement sur mesure pour bâtir votre projet professionnel.</p>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="assets/img/gallery/cv_bg.jpg" class="d-block w-100" alt="...">
+
+
+
+                <div class="carousel-item position-relative" style="height: 400px;">
+                    <!-- Image floutée -->
+                    <div class="blurred-bg position-absolute top-0 start-0 w-100 h-100">
+                        <img src="assets/img/hero/about.jpg" alt="..." class="w-100 h-100 object-fit-cover">
+                    </div>
+
+                    <!-- Texte superposé -->
+                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                        <h2 class="text-light fw-bold">« Chaque compétence compte »</h2>
+                        <p class="text-light fs-5">Valorisez votre profil et découvrez des opportunités faites pour vous, ici et maintenant.</p>
+                    </div>
                 </div>
+
+
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -165,11 +198,11 @@
                                 <!-- Select job items start -->
                                 <div class="select-job-items2">
                                     <select name="select">
-                                        <option value="">Toutes les Secteurs</option>
-                                        <option value="">Informatique</option>
-                                        <option value="">Horeca</option>
-                                        <option value="">Logistique</option>
-                                        <option value="">Chauffeur</option>
+                                        <option name="type" value="">Toutes les Secteurs</option>
+                                        <option name="type" value="informatique">Informatique</option>
+                                        <option name="type" value="horeca">Horeca</option>
+                                        <option name="type" value="logistique">Logistique</option>
+                                        <option name="type" value="chauffeur">Chauffeur</option>
                                     </select>
                                 </div>
                                 <!--  Select job items End-->
@@ -179,19 +212,19 @@
                                         <h4>Types d'emplois </h4>
                                     </div>
                                     <label class="container">Temps Plein
-                                        <input type="checkbox" >
+                                        <input type="checkbox" name="type" value="temp-plein" >
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">Temps Partiel
-                                        <input type="checkbox" checked="checked active">
+                                        <input type="checkbox"  name="type" value="temp-partiel" >
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">A distance
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="type" value="distance">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">Freelance
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="type" value="freelance">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -201,20 +234,24 @@
                                 <div class="select-Categories pb-50">
                                     <div class="small-section-tittle2">
                                         <h4>Salaire</h4>
-                                    <label class="container">20 000€ ++
-                                        <input type="checkbox" >
+                                    <label class="container">15 000€ ++
+                                        <input type="checkbox" name="salaire" value="15000" >
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">20 000€ ++
-                                        <input type="checkbox" checked="checked active">
+                                        <input type="checkbox" name="salaire" value="20000">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="container">20 000€ ++
-                                        <input type="checkbox">
+                                    <label class="container">25 000€ ++
+                                        <input type="checkbox" name="salaire" value="25000">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="container">20 000€ ++
-                                        <input type="checkbox">
+                                    <label class="container">30 000€ ++
+                                        <input type="checkbox" name="salaire" value="30000">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                        <label class="container">40 000€ ++
+                                        <input type="checkbox" name="salaire" value="40000">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -229,19 +266,19 @@
                                         <h4>Langue demandées</h4>
                                     </div>
                                     <label class="container">Toutes
-                                        <input type="checkbox" >
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Anglais
                                         <input type="checkbox" checked="checked active">
                                         <span class="checkmark"></span>
                                     </label>
+                                    <label class="container">Anglais
+                                        <input type="checkbox"  name="langue" value="anglais" >
+                                        <span class="checkmark"></span>
+                                    </label>
                                     <label class="container">Français
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="langue" value="francais">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="container">Néerlandais
-                                        <input type="checkbox">
+                                        <input type="checkbox"  name="langue" value="neerlandais">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -272,145 +309,135 @@
                                 <!-- Count of Job list End -->
                                 <!-- single-job-content -->
                                 <div class="row row-cols-1 row-cols-lg-3 g-4">
-                                    <div class="col">
+                                    <div class="col job-card" data-type="temp-plein" data-salaire="30000" data-langue="francais" data-secteur="informatique" >
                                         <div class="card h-100">
-                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <img src="assets/img/banner/it.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Développeur Web Junior</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 30 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Informatique</p>
+                                                <p class="card-text"><strong>Langue</strong>: Français</p>
+                                                <p class="card-text"><strong>Description</strong>: Rejoignez une équipe dynamique pour créer des sites modernes. </p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col job-card" data-type="temp-partiel" data-salaire="20000" data-langue="anglais" data-secteur="horeca" >
                                         <div class="card h-100">
-                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <img src="assets/img/banner/serveur.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Serveur(se) en restauration</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 20 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Horeca</p>
+                                                <p class="card-text"><strong>Langue</strong>: Anglais</p>
+                                                <p class="card-text"><strong>Description</strong>: Poste en service à temps partiel dans un restaurant local.</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col job-card" data-type="freelance" data-salaire="30000" data-langue="anglais" data-secteur="informatique">
                                         <div class="card h-100">
-                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <img src="assets/img/banner/designer.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Designer UI/UX</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 30 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: informatique</p>
+                                                <p class="card-text"><strong>Langue</strong>: Anglais</p>
+                                                <p class="card-text"><strong>Description</strong>: Missions freelance pour améliorer l’ergonomie d’applications web. </p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <!-- single-job-content -->
-                                <div class="row row-cols-1 row-cols-lg-3 g-4 mt-5">
-                                    <div class="col">
+                                    <div class="col job-card" data-type="distance" data-salaire="25000" data-langue="neerlandais" data-secteur="logistique">
                                         <div class="card h-100">
-                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <img src="assets/img/banner/logistic.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Gestionnaire de stocks</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 25 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Logistique</p>
+                                                <p class="card-text"><strong>Langue</strong>: Néerlandais</p>
+                                                <p class="card-text"><strong>Description</strong>: Télétravail partiel possible, gestion d’inventaire automatisé.</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col job-card" data-type="temp-plein" data-salaire="25000" data-langue="francais" data-secteur="chauffeur">
                                         <div class="card h-100">
-                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <img src="assets/img/banner/livreur.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Chauffeur-livreur</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 25 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Chauffeur</p>
+                                                <p class="card-text"><strong>Langue</strong>: Français</p>
+                                                <p class="card-text"><strong>Description</strong>: Livraison de colis dans la région de Bruxelles.</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col job-card" data-type="freelance" data-salaire="40000" data-langue="anglais" data-secteur="logistique">
                                         <div class="card h-100">
-                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <img src="assets/img/banner/call-center.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Consultant logistique</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 40 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Logistique</p>
+                                                <p class="card-text"><strong>Langue</strong>: Anglais</p>
+                                                <p class="card-text"><strong>Description</strong>: Conseil en optimisation des chaînes de distribution.</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <!-- single-job-content -->
-
-
-                                <div class="row row-cols-1 row-cols-lg-3 g-4 mt-5">
-                                    <div class="col">
+                                    <div class="col job-card" data-type="temp-partiel" data-salaire="15000" data-langue="francais" data-secteur="horeca">
                                         <div class="card h-100">
-                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <img src="assets/img/banner/restaurant.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Commis de cuisine</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 15 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Horeca</p>
+                                                <p class="card-text"><strong>Langue</strong>: Français</p>
+                                                <p class="card-text"><strong>Description</strong>: Préparation et dressage de plats simples dans une brasserie.</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col job-card" data-type="distance" data-salaire="30000" data-langue="neerlandais" data-secteur="informatique">
                                         <div class="card h-100">
-                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <img src="assets/img/banner/support.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Support IT à distance</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 30 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Informatique</p>
+                                                <p class="card-text"><strong>Langue</strong>: Néerlandais</p>
+                                                <p class="card-text"><strong>Description</strong>: Assistance technique pour utilisateurs en entreprise.</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col job-card" data-type="temp-plein" data-salaire="30000" data-langue="neerlandais" data-secteur="chauffeur">
                                         <div class="card h-100">
-                                            <img src="assets/img/blog/home-blog2.jpg" class="card-img-top" alt="...">
+                                            <img src="assets/img/banner/buss.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Titre d'emplois</h5>
-                                                <p class="card-text"><strong>Salaire</strong>: </p>
-                                                <p class="card-text"><strong>Secteur</strong>: </p>
-                                                <p class="card-text"><strong>Langue</strong>: </p>
-                                                <p class="card-text"><strong>Description</strong>: </p>
+                                                <h5 class="card-title">Conducteur de bus scolaire</h5>
+                                                <p class="card-text"><strong>Salaire</strong>: 30 000€</p>
+                                                <p class="card-text"><strong>Secteur</strong>: Chauffeur</p>
+                                                <p class="card-text"><strong>Langue</strong>: Néerlandais</p>
+                                                <p class="card-text"><strong>Description</strong>: Conduite d'enfants matin et soir en toute sécurité.<</p>
                                             </div>
                                             <div class="card-footer">
                                                 <small class="text-body-secondary">derniere mise a jour il y'a 3 min</small>
@@ -418,14 +445,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- single-job-content End -->
 
-                                <!-- single-job-content -->
 
-                                <!-- single-job-content -->
-
-                                <!-- single-job-content -->
-
-                                <!-- single-job-content -->
 
                             </div>
                         </section>
@@ -457,137 +479,114 @@
         <!--Pagination End  -->
         
     </main>
-    <footer>
-        <!-- Footer Start-->
-        <div class="footer-area footer-bg footer-padding">
-            <div class="container">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                       <div class="single-footer-caption mb-50">
-                         <div class="single-footer-caption mb-30">
-                             <div class="footer-tittle">
-                                 <h4>About Us</h4>
-                                 <div class="footer-pera">
-                                     <p>Heaven frucvitful doesn't cover lesser dvsays appear creeping seasons so behold.</p>
+<footer>
+    <!-- Footer Start-->
+    <div class="footer-area footer-bg footer-padding">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-footer-caption mb-50">
+                        <div class="single-footer-caption mb-30">
+                            <div class="footer-tittle">
+                                <h4>Comment s’inscrire à la Mission Locale de Saint-Gilles ? </h4>
+                                <div class="footer-pera">
+                                    <p>Les nouvelles inscriptions se font tous les jours uniquement sur rendez-vous (ou au 02/542.63.21), dans nos locaux de la chaussée de Waterloo, 255 (2e étage) .</p>
                                 </div>
-                             </div>
-                         </div>
-
-                       </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Contact Info</h4>
-                                <ul>
-                                    <li>
-                                    <p>Address :Your address goes
-                                        here, your demo address.</p>
-                                    </li>
-                                    <li><a href="#">Phone : +8880 44338899</a></li>
-                                    <li><a href="#">Email : info@colorlib.com</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Important Link</h4>
-                                <ul>
-                                    <li><a href="#"> View Project</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Testimonial</a></li>
-                                    <li><a href="#">Proparties</a></li>
-                                    <li><a href="#">Support</a></li>
-                                </ul>
                             </div>
                         </div>
+
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Newsletter</h4>
-                                <div class="footer-pera footer-pera2">
-                                 <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
-                             </div>
-                             <!-- Form -->
-                             <div class="footer-form" >
-                                 <div id="mc_embed_signup">
-                                     <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                     method="get" class="subscribe_form relative mail_part">
-                                         <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
-                                         class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
-                                         onblur="this.placeholder = ' Email Address '">
-                                         <div class="form-icon">
-                                             <button type="submit" name="submit" id="newsletter-submit"
-                                             class="email_icon newsletter-submit button-contactForm"><img src="assets/img/icon/form.png" alt=""></button>
-                                         </div>
-                                         <div class="mt-10 info"></div>
-                                     </form>
-                                 </div>
-                             </div>
-                            </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>Info de contact</h4>
+                            <ul>
+                                <li>
+                                    <p>Address : Chau. de Waterloo 255, 1060 Saint-Gilles.</p>
+                                </li>
+                                <li><a href="#">Téléphone : 02 542 63 21</a></li>
+                                <li><a href="#">Email : info@mlsg.com</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>Menu</h4>
+                            <ul>
+                                <li><a href="#">Accueil</a></li>
+                                <li><a href="#">Qui sommes-nous ?</a></li>
+                                <li><a href="#">Accompagnements</a></li>
+                                <li><a href="#">Orientation</a></li>
+                                <li><a href="#">Agenda formations</a></li>
+                                <li><a href="#">Nos offres d'emploi</a></li>
+                                <li><a href="#">Biotiful</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-               <!--  -->
-               <div class="row footer-wejed justify-content-between">
-                       <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                          <!-- logo -->
-                          <div class="footer-logo mb-20">
-                            <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                          </div>
-                       </div>
-                       <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                        <div class="footer-tittle-bottom">
-                            <span>5000+</span>
-                            <p>Talented Hunter</p>
-                        </div>
-                       </div>
-                       <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                            <div class="footer-tittle-bottom">
-                                <span>451</span>
-                                <p>Talented Hunter</p>
-                            </div>
-                       </div>
-                       <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                            <!-- Footer Bottom Tittle -->
-                            <div class="footer-tittle-bottom">
-                                <span>568</span>
-                                <p>Talented Hunter</p>
-                            </div>
-                       </div>
-               </div>
+
+            </div>
+            <!--  -->
+            <div class="row footer-wejed justify-content-between">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <!-- logo -->
+                    <div class="footer-logo mb-20">
+                        <a href="index.html"><img src="assets/img/logo/logotype_mlsg_white.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <div class="footer-tittle-bottom">
+                        <span>5000+</span>
+                        <p>Accompagnements</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <div class="footer-tittle-bottom">
+                        <span>451</span>
+                        <p>Employés</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                    <!-- Footer Bottom Tittle -->
+                    <div class="footer-tittle-bottom">
+                        <span>568</span>
+                        <p>Collaborateurs</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- footer-bottom area -->
-        <div class="footer-bottom-area footer-bg">
-            <div class="container">
-                <div class="footer-border">
-                     <div class="row d-flex justify-content-between align-items-center">
-                         <div class="col-xl-10 col-lg-10 ">
-                             <div class="footer-copy-right">
-                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                             </div>
-                         </div>
-                         <div class="col-xl-2 col-lg-2">
-                             <div class="footer-social f-right">
-                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                 <a href="#"><i class="fab fa-twitter"></i></a>
-                                 <a href="#"><i class="fas fa-globe"></i></a>
-                                 <a href="#"><i class="fab fa-behance"></i></a>
-                             </div>
+    </div>
+    <!-- footer-bottom area -->
+    <!-- <div class="footer-bottom-area footer-bg">
+         <div class="container">
+             <div class="footer-border">
+                 <div class="row d-flex justify-content-between align-items-center">
+                     <div class="col-xl-10 col-lg-10 ">
+                         <div class="footer-copy-right">
+                             <p>&lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;
+                                 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                 &lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;</p>
                          </div>
                      </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End-->
-    </footer>
+                     <div class="col-xl-2 col-lg-2">
+                         <div class="footer-social f-right">
+                             <a href="#"><i class="fab fa-facebook-f"></i></a>
+                             <a href="#"><i class="fab fa-twitter"></i></a>
+                             <a href="#"><i class="fas fa-globe"></i></a>
+                             <a href="#"><i class="fab fa-behance"></i></a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>-->
+    <!-- Footer End-->
+</footer>
 
 	<!-- JS here -->
 	
@@ -628,6 +627,55 @@
 
    <!-- animation -->
     <script src="./assets/js/job-listing.js"></script>
+<script>
+    $(document).ready(function () {
+        $('input[type="checkbox"]').on('change', function () {
+            const filters = {
+                type: $('input[name="type"]:checked').map(function () {
+                    return $(this).val().trim().toLowerCase();
+                }).get(),
+                salaire: $('input[name="salaire"]:checked').map(function () {
+                    return $(this).val().trim().toLowerCase();
+                }).get(),
+                langue: $('input[name="langue"]:checked').map(function () {
+                    return $(this).val().trim().toLowerCase();
+                }).get(),
+            };
+
+            $('.job-card').each(function () {
+                const $card = $(this);
+                const type = $card.data('type')?.toString().trim().toLowerCase();
+                const salaire = $card.data('salaire')?.toString().trim().toLowerCase();
+                const langue = $card.data('langue')?.toString().trim().toLowerCase();
+                const secteur = $card.data('secteur')?.toString().trim().toLowerCase();
+
+                let visible = true;
+
+                if (filters.type.length > 0 && !filters.type.includes(type)) {
+                    visible = false;
+                }
+
+                if (filters.salaire.length > 0 && !filters.salaire.includes(salaire)) {
+                    visible = false;
+                }
+
+                if (filters.langue.length > 0 && !filters.langue.includes(langue)) {
+                    visible = false;
+                }
+
+
+                if (visible) {
+                    $card.css("display", "block");
+                } else {
+                    $card.css("display", "none");
+                }
+            });
+        });
+    });
+</script>
+
+
         
     </body>
 </html>
+
