@@ -139,52 +139,52 @@
 
         <section id="cielBas" class="d-flex justify-content-center align-items-center " style="height: 50vh;">
             <div class="container mb-5 mt-5 mt-md-0">
-                <div class="nuaBlock d-flex" id="nuaBlock1">
+                <a href="#cielTresBas"><div class="nuaBlock d-flex" id="nuaBlock1">
                     <div class="nua d-flex" id="nua1">
-                        <div>🌱 Économie humaine</div>
+                        <div class="nuaText">🌱 Économie humaine</div>
                     </div>
-                </div>
-                <div class="nuaBlock d-flex" id="nuaBlock2">
+                </div></a>
+                <a href="#cielTresBas"><div class="nuaBlock d-flex" id="nuaBlock2">
                     <div class="nua d-flex" id="nua2">
-                        <div>🤝 Emploi local</div>
+                        <div class="nuaText">🤝 Emploi local</div>
                     </div>
-                </div>
-                <div class="nuaBlock d-flex" id="nuaBlock3">
+                </div></a>
+               <a href="#cielTresBas"> <div class="nuaBlock d-flex" id="nuaBlock3">
                     <div class="nua d-flex" id="nua3">
-                        <div>🧑‍🌾 Agriculture solidaire</div>
+                        <div class="nuaText">🧑‍🌾 Agriculture solidaire</div>
                     </div>
-                </div>
-                <div class="nuaBlock d-flex" id="nuaBlock4">
+                </div></a>
+                <a href="#cielTresBas"><div class="nuaBlock d-flex" id="nuaBlock4">
                     <div class="nua d-flex" id="nua4">
-                        <div>🌍 Circuit court</div>
+                        <div class="nuaText">🌍 Circuit court</div>
                     </div>
-                </div>
-                <div class="nuaBlock d-flex" id="nuaBlock5">
+                </div></a>
+                <a href="#cielTresBas"><div class="nuaBlock d-flex" id="nuaBlock5">
                     <div class="nua d-flex" id="nua5">
-                        <div>💡 Savoir-faire partagé</div>
+                        <div class="nuaText">💡 Savoir-faire partagé</div>
                     </div>
-                </div>
-                <div class="nuaBlock d-flex" id="nuaBlock6">
+                </div></a>
+                <a href="#cielTresBas"><div class="nuaBlock d-flex" id="nuaBlock6">
                     <div class="nua d-flex" id="nua6">
-                        <div>🧡 Vivre ensemble</div>
+                        <div class="nuaText">🧡 Vivre ensemble</div>
                     </div>
-                </div>
-                <div class="nuaBlock d-flex" id="nuaBlock7">
+                </div></a>
+                <a href="#cielTresBas"><div class="nuaBlock d-flex" id="nuaBlock7">
                     <div class="nua d-flex" id="nua7">
-                        <div>♻️ Projet durable</div>
+                        <div class="nuaText">♻️ Projet durable</div>
                     </div>
-                </div>
+                </div></a>
 
             </div>
         </section>
 
 
 
-        <section id="cielTresBas" class=" mt-5 mt-md-0" style="height: 75vh; overflow: hidden;">
+        <section id="cielTresBas" class=" mt-5 mt-md-0" >
             <div class="container d-flex justify-content-center align-items-center mt-5 mt-md-0">
 
                 <div class="play mx-auto mt-2 flex max-w-4xl justify-center text-center w-75 ">
-                    <h3 class="play text-secondary">
+                    <h3 class="play text-success">
                         Biotiful a vu le jour en 2019, porté par l’élan collectif d’une formation en maraîchage
                         bio pour les jeunes. Depuis 2020, le projet prend racine et grandit, nourri par les terres
                         cultivées,
@@ -195,7 +195,7 @@
             </div>
 
             <div class="container my-5">
-                <div class="row text-center g-4">
+                <div class="row d-none d-md-flex text-center g-4">
 
 
                     <div class="col-md-3 play col-sm-6">
@@ -297,7 +297,7 @@
 
         </section>
 
-        <section id="sol" class=" " style="height: 75vh; overflow: hidden; display: flex; justify-content: center;">
+        <section id="sol" class=" " >
 
 
 
@@ -471,10 +471,22 @@
             let panier = document.getElementById("panier");
             let scoreEl = document.getElementById("score");
             let score = 0;
+            let cadre = sol.getBoundingClientRect();
+            
+            
+
+            panier.style.bottom = "-50px";
+
 
             document.addEventListener("mousemove", function (event) {
-                let x = event.clientX - sol.getBoundingClientRect().left;
+                let cadre = sol.getBoundingClientRect();
+                let x = event.clientX - cadre.left;
                 panier.style.left = `${x}px`;
+
+                if (cadre.top > window.innerHeight){
+                    score = 0
+                    scoreEl.textContent = `Score : ${score}`;
+                }
             });
 
             setInterval(() => {
@@ -484,13 +496,15 @@
                 sol.appendChild(feuille);
 
                 let chute = setInterval(() => {
-                    let fRect = feuille.getBoundingClientRect();
-                    let pRect = panier.getBoundingClientRect();
+                    let fPosition = feuille.getBoundingClientRect();
+                    let pPosition = panier.getBoundingClientRect();
 
                     if (
-                        fRect.bottom >= pRect.top &&
-                        fRect.left < pRect.right &&
-                        fRect.right > pRect.left
+                        fPosition.bottom >= pPosition.top+20 &&
+                        fPosition.left < pPosition.right-30 &&
+                        fPosition.right > pPosition.left+30 &&
+                        fPosition.bottom <= pPosition.top+30
+
                     ) {
                         feuille.remove();
                         score++;
@@ -498,7 +512,9 @@
                         clearInterval(chute);
                     }
 
-                    if (fRect.top > window.innerHeight) {
+                    let cadre = sol.getBoundingClientRect();
+
+                    if (fPosition.top > cadre.bottom) {
                         feuille.remove();
                         clearInterval(chute);
                     }
@@ -507,28 +523,10 @@
         </script>
 
         <style>
-            .play {
 
-                animation: pageslide3 linear forwards;
-                animation-timeline: view();
-                animation-range: 10px 500px;
+            h3, p{
+                font-family: cursive;
             }
-
-            @keyframes pageslide3 {
-                0% {
-                    scale: 0.8;
-                    transform: translateY(100px);
-                    opacity: 0;
-
-                }
-
-                100% {
-                    transform: translateY(0px);
-                    scale: 1;
-                    opacity: 1;
-                }
-            }
-
             .card {
                 background: linear-gradient(to bottom, rgb(255, 255, 255), #dedede);
                 border: solid 0px;
@@ -542,7 +540,6 @@
 
             #panier {
                 position: absolute;
-                top: 370px;
                 scale: 0.5;
                 transform: translate(-50%);
                 z-index: 1000;
@@ -588,6 +585,7 @@
                 position: relative;
                 width: 100%;
                 height: 300px;
+                overflow: hidden;
 
 
             }
@@ -596,27 +594,48 @@
                 position: absolute;
 
                 border-radius: 50% 50%;
-                opacity: 0.9;
 
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: #517eaf;
-                animation: wave 1s linear infinite, float linear infinite;
+                animation: float linear infinite;
+            }
+
+            .nuaBlock:hover{
+                z-index: 1000;
+
+            }
+
+            .nuaText{
+                transition: 1s;
+            }
+            .nuaText:hover{
+                scale: 1.2;
             }
 
             .nua {
-
                 background: #fff;
                 border-radius: 50% 50%;
-                opacity: 0.9;
-
+                opacity: 0.7;
+                transition: 1s;
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 color: #517eaf;
-                animation: wave 1s linear infinite;
+                transition: 1s;
+                animation: wave  linear infinite;
             }
+
+            .nua:hover {
+                scale: 1.1;
+                cursor: pointer;
+                opacity: 0.9;
+
+            }   
+
+
 
             /* Animation de changement de bordure */
             @keyframes wave {
@@ -641,14 +660,14 @@
                 width: 520px;
                 height: 260px;
 
-                animation-duration: 20s;
+                animation-duration: 10s;
             }
 
             #nua2 {
                 width: 480px;
                 height: 260px;
 
-                animation-duration: 15s;
+                animation-duration: 8s;
             }
 
             #nua3 {
@@ -669,7 +688,7 @@
                 width: 440px;
                 height: 250px;
 
-                animation-duration: 10s;
+                animation-duration: 8s;
             }
 
             #nua6 {
@@ -739,19 +758,29 @@
                 background: linear-gradient(to bottom, #ffffff, #fff5c7);
                 position: relative;
                 width: 100%;
-                height: 300px;
+                min-height: 75vh; 
+                overflow: hidden;
+                
 
 
             }
+
+
+        
 
             #sol {
                 background: linear-gradient(to bottom, #fff5c7, #ffc15d);
                 position: relative;
                 width: 100%;
-                height: 300px;
+                height: 75vh; 
+                overflow: hidden; 
+                display: flex; 
+                justify-content: center;
 
 
             }
+
+            
         </style>
 </body>
 
